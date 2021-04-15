@@ -1,0 +1,7378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="background" lang="pt_BR" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+
+<title>SIGAA - Sistema Integrado de Gest&#227;o de Atividades Acad&#234;micas</title>
+
+
+
+
+<link class="component" href="/sigaa/a4j/s/3_3_3.Finalorg/richfaces/renderkit/html/css/basic_classes.xcss/DATB/eAF7sqpgb-jyGdIAFrMEaw__.jsf" rel="stylesheet" type="text/css" /><link class="component" href="/sigaa/a4j/s/3_3_3.Finalorg/richfaces/renderkit/html/css/extended_classes.xcss/DATB/eAF7sqpgb-jyGdIAFrMEaw__.jsf" media="rich-extended-skinning" rel="stylesheet" type="text/css" /><script src="/sigaa/a4j/g/3_3_3.Finalorg.ajax4jsf.javascript.PrototypeScript.jsf" type="text/javascript"></script><script src="/sigaa/a4j/g/3_3_3.Finalorg.ajax4jsf.javascript.AjaxScript.jsf" type="text/javascript"></script><script src="/sigaa/a4j/g/3_3_3.Finalorg.ajax4jsf.javascript.ImageCacheScript.jsf" type="text/javascript"></script><script src="/sigaa/a4j/g/3_3_3.Finalorg/ajax4jsf/javascript/scripts/form.js.jsf" type="text/javascript"></script><script src="/sigaa/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/browser_info.js.jsf" type="text/javascript"></script><script src="/sigaa/a4j/g/3_3_3.Finalscripts/simpleTogglePanel.js.jsf" type="text/javascript"></script><link class="component" href="/sigaa/a4j/s/3_3_3.Finalcss/simpleTogglePanel.xcss/DATB/eAF7sqpgb-jyGdIAFrMEaw__.jsf" rel="stylesheet" type="text/css" /><script type="text/javascript">window.RICH_FACES_EXTENDED_SKINNING_ON=true;</script><script src="/sigaa/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/skinning.js.jsf" type="text/javascript"></script><link rel="shortcut icon" href="/sigaa/shared/img/ufma.ico" />
+
+
+
+<script type="text/javascript" src="/shared/jsBundles/jawr_loader.js"></script>
+<script type="text/javascript">
+	JAWR.loader.style('/bundles/css/sigaa_base.css', 'all');
+	JAWR.loader.style('/css/ufrn_print.css', 'print');
+	
+	JAWR.loader.script('/bundles/js/sigaa_base.js');
+</script>
+<link rel="stylesheet" type="text/css" media="all" href="/sigaa/cssBundles/gzip_N74409266/bundles/css/sigaa.css" />
+
+<link rel="stylesheet" type="text/css" href="/shared/css/ufma/ufma-menu.css"/>
+<link rel="stylesheet" type="text/css" href="/shared/css/ufma/login-acessivel.css"/>
+
+
+
+<script type="text/javascript">
+	var mensagem;
+	var initMensagem = function() {
+		mensagem = new Mensagem();
+	}
+	YAHOO.util.Event.addListener(window,'load', initMensagem);
+	
+	
+	function isMobile(){
+		var a = navigator.userAgent||navigator.vendor||window.opera;
+		if (/android|blackberry|ip(hone|od|ad)|kindle|maemo|opera m(ob|in)i|palm( os)?|symbian/i.test(a)) {			
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+// 	function isIE(){
+
+
+// 				return true;
+
+// 				return false;
+
+// 	}
+	
+	var modo = null;
+	//#5223, marcos, removendo alguns redirecionamentos
+	//if ((isMobile() && !isIE()) && modo == 'mobile') {
+	//	window.location = "/sigaa/mobile/touch";
+	//}
+	
+</script>
+<!-- Fim dos imports para abrir chamado -->
+</head>
+
+<body>
+<noscript>
+	JavaScript do navegador n&#227;o habilitado.
+</noscript>
+	
+
+	
+		<div id="container">
+			
+			<div id="cabecalho">
+				<div id="info-sistema">
+				
+				
+				<div class="span6 accessibility-container">
+				
+	                        <ul id="accessibility">
+	                                <li>
+		                                <a accesskey="1" href="#content" id="link-conteudo">
+		                                  
+		                                    <span> Ir para o Conte&#250;do (1)</span>
+		                                </a>
+		                            </li>
+		                            <li>
+		                                <a accesskey="2" href="#navigation" id="link-navegacao">
+											
+		                                    <span>Ir para o Menu (2)</span>
+		                                </a>
+		                            </li>
+		                            <li>
+		                                <a accesskey="3" href="#footer" id="link-rodape">
+		                                   
+		                                    <span>Ir para o Rodap&#233; (3)</span>
+		                                </a>
+		                            </li>
+		                    </ul>
+	                    </div>
+	             
+					<h1>
+						<span>UFMA - SIGAA -</span>
+					</h1>
+					<span style="margin: 0px; padding: 0px;">Sistema Integrado de Gest&#227;o de Atividades Acad&#234;micas</span>
+
+					
+						<div id="tempoSessao" style="padding-right: 10px;"></div>
+						<span class="sair-sistema"> <a href="/sigaa/logar.do?dispatch=logOff">SAIR</a>
+						</span>
+					
+				</div>
+				
+				
+
+				<div id="painel-usuario" >
+					
+						<div id="menu-usuario">
+							<ul>
+								<li class="modulos">
+									
+										<span id="modulos"> 
+											<a href="/sigaa/verMenuPrincipal.do"> 
+												M&#243;dulos
+											</a>
+										</span>
+									
+								</li>
+								
+
+									<li class="caixa-postal">
+										<a href=/sigaa/abrirCaixaPostal.jsf?sistema=2> 
+											 
+											
+												
+												
+													Cx. Postal <font color="red" style="font-size: 0.7em;">(12)</font>
+												
+											
+										</a>
+									</li>
+
+								
+								<li class="chamado">
+									
+										
+											<a href="javascript://nop/"	onclick="alert('Caro aluno, em caso de d&#250;vidas em rela&#231;&#227;o ao uso do SIGAA, recorra &#224; coordena&#231;&#227;o do seu curso.\nEm caso de erro, envie uma mensagem para sistemas.ti@ufma.br (n&#227;o esquecendo de informar seu n&#250;mero de matr&#237;cula).');">Abrir Chamado</a>
+										
+										
+									
+								</li>
+								
+									
+									
+										<li class="menus"><a href="/sigaa/verPortalDiscente.do">Menu Discente</a></li>
+									
+									
+								
+								
+								
+								
+
+								
+									<li class="dados-pessoais"><a href="#" onclick="window.open('/sigaa/alterar_dados.jsf','','width=670,height=430, top=100, left=100, scrollbars' )">Alterar senha</a></li>
+								
+								<li class="ajuda">
+									 
+									<a href="https://docs.info.ufrn.br/doku.php?id=suporte:sigaa:visao_geral" > Ajuda </a>
+								</li>
+							</ul>
+						</div>
+
+						<div id="info-usuario">
+
+							<!--@author Jamesson A. Gomes - UFMA-->
+							<!-- -->
+							<!--
+							<p class="periodo-atual">
+								
+									Semestre atual: <strong>2020.2</strong>
+								
+							</p>
+							-->
+							
+								<p class="periodo-atual">
+									
+										Semestre 
+									
+									
+									
+										atual:
+									
+									<strong>2020.2</strong>
+								</p>
+							
+							<p class="usuario">
+								
+									<span title="SAHRA VALE SILVA">
+										SAHRA VALE SILVA
+									</span>
+									
+									
+										<i> 
+											<small> 
+												<a href="/sigaa/escolhaVinculo.do?dispatch=listar">Alterar v&#237;nculo</a>
+											</small>
+										</i>
+									
+								
+							</p>
+							 
+								<p class="unidade">
+									DIRETORIA DE CENTRO/CCSO
+									 
+										(23.00)
+									
+									
+								</p>
+							
+						</div>
+					
+					<div id="menu-principal"></div>
+				</div>
+			</div>
+			
+
+			<div id="conteudo">
+	
+	
+
+
+<script src="/sigaa/javascript/encoding.js" type="text/javascript" ></script>
+
+
+
+	
+	
+	
+
+	
+	
+	
+
+
+<link rel="stylesheet" type="text/css" media="all" href="/sigaa/cssBundles/gzip_565170911/css/portal_docente.css" />
+
+
+<script type="text/javascript">
+	JAWR.loader.script('/javascript/paineis/noticias.js');
+    JAWR.loader.script('/bundles/js/jquery.js');
+</script>
+<script type="text/javascript" src="/shared/javascript/jquery/jquery-1.4.4.min.js"></script>
+<script src="/sigaa/javascript/rotator.js" type="text/javascript" ></script>
+<style>
+#cboxLoadedContent iframe {
+	background-color:#FFFFFF;
+}
+</style>
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/sigaa/primefaces_resource/1.1/skins/sam/skin.css" />
+
+	
+	<div id="portal-docente">
+		
+		
+		
+			
+			
+			
+				
+				
+				
+
+
+
+
+
+
+
+<div id="navigation"></div>
+<div id="menu-dropdown">
+	<div class="wrapper">
+		<div id="divMenuAcess">
+			<div id="menu-acessivel-ufma-div" class="div-menu-acessivel">
+			
+				
+
+
+
+
+
+
+
+
+
+
+
+		
+<form id="menu:formensino" name="menu:formensino" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="menu:formensino" value="menu:formensino" />
+
+			<div id="menu-acessivel-nv1-ensino" class="menu-horizontal">
+					<a id="menu:formensino:menuensino" name="menu:formensino:menuensino" href="#">
+						<img alt="Icone Ensino" src="/sigaa/img/icones/ensino_menu.gif"/>
+						Ensino
+				 	</a>
+				 	<ul>
+						<li class="barra-lateral"></li>
+						
+
+
+
+
+
+
+
+
+
+
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+			<li class="botao vertical nV1">
+		
+		
+		
+		
+		
+			<a id="menu:formensino:subMenunomeSocial" name="menu:formensino:subMenunomeSocial" href="#"> Nome Social
+		    		<img alt="seta para direita, h&#225; submenu" class="seta"
+					src="/sigaa/img/icone.png">
+			</a>
+			<ul>
+				<li class=marcador></li>
+				
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+		
+<script type="text/javascript" language="Javascript">function dpf(f) {var adp = f.adp;if (adp != null) {for (var i = 0;i < adp.length;i++) {f.removeChild(adp[i]);}}};function apf(f, pvp) {var adp = new Array();f.adp = adp;var i = 0;for (k in pvp) {var p = document.createElement("input");p.type = "hidden";p.name = k;p.value = pvp[k];f.appendChild(p);adp[i++] = p;}};function jsfcljs(f, pvp, t) {apf(f, pvp);var ft = f.target;if (t) {f.target = t;}f.submit();f.target = ft;dpf(f);};</script>
+<a href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:j_id_jsp_1539803089_0pc4':'menu:formensino:j_id_jsp_1539803089_0pc4'},'');}return false">Solicitar Nome Social</a>
+		
+	
+	</li>
+
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+			<a id="menu:formensino:listarSolicitacoesNomeSocial" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:listarSolicitacoesNomeSocial':'menu:formensino:listarSolicitacoesNomeSocial'},'');}return false">Listar Solicita&#231;&#245;es de Nome Social</a>
+		
+	
+	</li>
+
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+			<a id="menu:formensino:retornoNomeCivil" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:retornoNomeCivil':'menu:formensino:retornoNomeCivil'},'');}return false">Retornar	Nome Civil</a>
+		
+	
+	</li>
+
+	
+			</ul>
+		
+		
+		</li>
+	
+
+
+	
+	
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+			<li class="botao vertical nV1">
+		
+		
+		
+		
+		
+			<a id="menu:formensino:subMenuavaliacaoInstitucional" name="menu:formensino:subMenuavaliacaoInstitucional" href="#"> Avalia&#231;&#227;o Docente
+		    		<img alt="seta para direita, h&#225; submenu" class="seta"
+					src="/sigaa/img/icone.png">
+			</a>
+			<ul>
+				<li class=marcador></li>
+				
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+			<a id="menu:formensino:preencherAvaliacaoInstitucional" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:preencherAvaliacaoInstitucional':'menu:formensino:preencherAvaliacaoInstitucional'},'');}return false">
+			
+			Preencher a Avalia&#231;&#227;o Docente
+			
+			</a>
+		
+	
+	</li>
+
+	
+			</ul>
+		
+		
+		</li>
+	
+
+
+
+	
+
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+		<img alt="icone /sigaa/img/celular_icone.gif" class="icone-menu-ufma" src="/sigaa/img/celular_icone.gif">
+	
+	
+	
+		
+		<a id="menu:formensino:minhasNotas" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:minhasNotas':'menu:formensino:minhasNotas'},'');}return false">
+			Minhas Notas
+		</a>
+	
+	
+	</li>
+
+
+
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+		<img alt="icone /sigaa/img/celular_icone.gif" class="icone-menu-ufma" src="/sigaa/img/celular_icone.gif">
+	
+	
+	
+		
+		<a id="menu:formensino:atestadoMatricula" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:atestadoMatricula':'menu:formensino:atestadoMatricula'},'');}return false">Atestado de Matr&#237;cula</a>
+	
+	
+	</li>
+
+
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+		<a id="menu:formensino:consultarHistorico" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:consultarHistorico':'menu:formensino:consultarHistorico'},'');}return false">Consultar Hist&#243;rico Completo</a>
+	
+	
+	</li>
+
+	
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+		<a id="menu:formensino:consultarHistoricoConclusao" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:consultarHistoricoConclusao':'menu:formensino:consultarHistoricoConclusao'},'');}return false">Consultar Hist&#243;rico de Conclus&#227;o</a>
+	
+	
+	</li>
+
+	
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+		<a id="menu:formensino:certificadoConclusao" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:certificadoConclusao':'menu:formensino:certificadoConclusao'},'');}return false">Certid&#227;o de Conclus&#227;o do Curso</a>
+	
+	
+	</li>
+
+	
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+		<a id="menu:formensino:consultarIndicesAcademicos" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:consultarIndicesAcademicos':'menu:formensino:consultarIndicesAcademicos'},'');}return false">Consultar &#205;ndices Acad&#234;micos</a>
+		
+	
+	
+	</li>
+
+	
+	
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+		
+		
+	
+	
+	</li>
+
+	
+	
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+		<a id="menu:formensino:declaracaoVinculo" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:declaracaoVinculo':'menu:formensino:declaracaoVinculo'},'');}return false">Declara&#231;&#227;o de V&#237;nculo</a>
+						
+	
+	
+	</li>
+
+	
+	
+	
+	
+			
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+				<a id="menu:formensino:destrancarCurso" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:destrancarCurso':'menu:formensino:destrancarCurso'},'');}return false">Destrancar	Curso</a>
+				
+			
+	
+	</li>
+
+	
+	
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+	
+		
+			
+				<li id="divisor" class="divisor"><hr></li>
+			
+		
+		
+			<li class="botao vertical nV1">
+		
+		
+		
+		
+		
+		
+			
+		<a id="menu:formensino:selecaoCursos2Ciclos" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:selecaoCursos2Ciclos':'menu:formensino:selecaoCursos2Ciclos'},'');}return false">Sele&#231;&#227;o de Cursos para Segundo Ciclo</a>
+		
+	
+		
+		</li>
+	
+
+
+
+	
+	
+
+
+	
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+			
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+	
+		
+			
+				<li id="divisormatriculaOnline" class="divisor"><hr></li>
+			
+		
+		
+			<li class="botao vertical nV1">
+		
+		
+		
+		
+		
+			<a id="menu:formensino:subMenumatriculaOnline" name="menu:formensino:subMenumatriculaOnline" href="#"> Matr&#237;cula On-Line
+		    		<img alt="seta para direita, h&#225; submenu" class="seta"
+					src="/sigaa/img/icone.png">
+			</a>
+			<ul>
+				<li class=marcador></li>
+				
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+		 		
+				
+	
+	</li>
+
+				
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+				
+				
+				
+	
+	</li>
+	
+						
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+				
+				<a id="menu:formensino:realizarMatriculaFerias" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:realizarMatriculaFerias':'menu:formensino:realizarMatriculaFerias'},'');}return false">Realizar Matr&#237;cula em Turma de F&#233;rias</a>
+				
+	
+	</li>
+				
+				
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+			
+				<a id="menu:formensino:comprovanteMatricula" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:comprovanteMatricula':'menu:formensino:comprovanteMatricula'},'');}return false">Ver Comprovante de Matr&#237;cula</a>
+				
+	
+	</li>
+
+				
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+				
+				<a id="menu:formensino:orientacoesMatricula" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:orientacoesMatricula':'menu:formensino:orientacoesMatricula'},'');}return false">Ver Orienta&#231;&#245;es de Matr&#237;cula</a>
+				
+	
+	</li>
+
+					
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+				
+				<a id="menu:formensino:resultadoProcessamento" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:resultadoProcessamento':'menu:formensino:resultadoProcessamento'},'');}return false">Ver Resultado do Processamento</a>
+				
+	
+	</li>
+		
+					
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+				
+				<a id="menu:formensino:planoMatriculas" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:planoMatriculas':'menu:formensino:planoMatriculas'},'');}return false">Meu Plano de Matr&#237;culas</a>
+				
+	
+	</li>
+
+			
+			
+			</ul>
+		
+		
+		</li>
+	
+
+
+
+		
+		
+
+		
+			
+			
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+		<a id="menu:formensino:subMenusolicitacoesEnsinoIndividual" name="menu:formensino:subMenusolicitacoesEnsinoIndividual" href="#">Solicita&#231;&#245;es de Ensino Individual 
+					<img alt="seta para direita, h&#225; submenu" class="seta"
+				src="/sigaa/img/icone.png">
+		</a>
+		<ul>
+			<li class=marcador></li>
+			
+					
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+			
+						<a id="menu:formensino:solicitarEnsinoIndividual" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:solicitarEnsinoIndividual':'menu:formensino:solicitarEnsinoIndividual'},'');}return false">Solicitar Ensino Individual</a>
+					
+	
+	</li>
+
+					
+					
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+			
+						<a id="menu:formensino:solicitacoesEnviadas" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:solicitacoesEnviadas':'menu:formensino:solicitacoesEnviadas'},'');}return false">Visualizar Solicita&#231;&#245;es Enviadas</a>
+					
+	
+	</li>
+
+					
+					
+					
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+			
+					<a id="menu:formensino:comprovanteSolicitacoes" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:comprovanteSolicitacoes':'menu:formensino:comprovanteSolicitacoes'},'');}return false">Emitir Comprovante de Solicita&#231;&#245;es</a>
+					
+	
+	</li>
+
+			
+		</ul>
+	
+	
+	</li>
+
+		
+			
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+		<a id="menu:formensino:subMenusolicitacoesTurmasFerias" name="menu:formensino:subMenusolicitacoesTurmasFerias" href="#">Solicita&#231;&#245;es de Turma de F&#233;rias 
+					<img alt="seta para direita, h&#225; submenu" class="seta"
+				src="/sigaa/img/icone.png">
+		</a>
+		<ul>
+			<li class=marcador></li>
+			
+					
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+						<a id="menu:formensino:solicitarTurmaFerias" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:solicitarTurmaFerias':'menu:formensino:solicitarTurmaFerias'},'');}return false">Solicitar Turma de F&#233;rias</a>
+						
+					
+	
+	</li>
+
+
+					
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+						<a id="menu:formensino:solicitacoesFeriasEnviadas" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:solicitacoesFeriasEnviadas':'menu:formensino:solicitacoesFeriasEnviadas'},'');}return false">Visualizar Solicita&#231;&#245;es Enviadas</a>
+						
+					
+	
+	</li>
+
+
+					
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+						<a id="menu:formensino:comprovanteSolicitacoesFerias" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:comprovanteSolicitacoesFerias':'menu:formensino:comprovanteSolicitacoesFerias'},'');}return false">Emitir Comprovante de Solicita&#231;&#245;es</a>
+						
+						
+					
+	
+	</li>
+
+			
+			
+		</ul>
+	
+	
+	</li>
+	
+
+		
+
+		
+		
+		
+		
+		
+			
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+		<a id="menu:formensino:subMenucancelamentoComponente" name="menu:formensino:subMenucancelamentoComponente" href="#">Cancelamento de Inscri&#231;&#227;o Regular  &nbsp  
+					<img alt="seta para direita, h&#225; submenu" class="seta"
+				src="/sigaa/img/icone.png">
+		</a>
+		<ul>
+			<li class=marcador></li>
+			
+					
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+						<a id="menu:formensino:cancelarComponente" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:cancelarComponente':'menu:formensino:cancelarComponente'},'');}return false">Cancelar</a>
+					
+	
+	</li>
+
+
+					
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+						<a id="menu:formensino:listaCancelamentos" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:listaCancelamentos':'menu:formensino:listaCancelamentos'},'');}return false">Exibir Cancelamentos Efetuados</a>
+					
+					
+	
+	</li>
+
+			
+		</ul>
+	
+	
+	</li>
+
+			
+			<!-- UFMA - SIGAA-22 - spartacus em 11 de jun de 2020. -->
+			<!-- Item de menu para cancelamento em turma de f&#233;rias -->
+			
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+		<a id="menu:formensino:subMenucancelamentoInscricaoFerias" name="menu:formensino:subMenucancelamentoInscricaoFerias" href="#">Cancelamento de Inscri&#231;&#227;o de F&#233;rias 
+					<img alt="seta para direita, h&#225; submenu" class="seta"
+				src="/sigaa/img/icone.png">
+		</a>
+		<ul>
+			<li class=marcador></li>
+			
+					
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+						<a id="menu:formensino:cancelarInscricaoFerias" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:cancelarInscricaoFerias':'menu:formensino:cancelarInscricaoFerias'},'');}return false">Cancelar  </a>
+					
+	
+	</li>
+
+					
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+			
+						<a id="menu:formensino:listaCancelamentosFerias" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:listaCancelamentosFerias':'menu:formensino:listaCancelamentosFerias'},'');}return false">Exibir Cancelamentos Efetuados </a>
+					
+	
+	</li>
+
+			
+		</ul>
+	
+	
+	</li>
+
+			<!-- FIM - UFMA -->
+			
+		
+		
+		
+			
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<li id="divisortrancamentoPrograma" class="divisor"><hr></li>
+		
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+		<a id="menu:formensino:subMenutrancamentoPrograma" name="menu:formensino:subMenutrancamentoPrograma" href="#">Trancamento de Programa 
+					<img alt="seta para direita, h&#225; submenu" class="seta"
+				src="/sigaa/img/icone.png">
+		</a>
+		<ul>
+			<li class=marcador></li>
+			
+					
+					
+					
+						
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+							<a id="menu:formensino:solicitarTrancamento" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:solicitarTrancamento':'menu:formensino:solicitarTrancamento'},'');}return false">Iniciar Trancamento Regular</a>
+						
+	
+	</li>
+
+						
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+							<a id="menu:formensino:solicitarTrancamentoPosteriori" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:solicitarTrancamentoPosteriori':'menu:formensino:solicitarTrancamentoPosteriori'},'');}return false">Solicitar Trancamento a Posteriori</a>
+						
+	
+	</li>
+
+					
+					
+					
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+						<a id="menu:formensino:exibirSolicitacoesTrancamento" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:exibirSolicitacoesTrancamento':'menu:formensino:exibirSolicitacoesTrancamento'},'');}return false">Exibir Solicita&#231;&#245;es de Trancamento</a>
+					
+	
+	</li>
+
+			
+		</ul>
+	
+	
+	</li>
+
+		
+	
+	
+	
+	
+
+	
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<li id="divisorprogramasSeletivosEspeciais" class="divisor"><hr></li>
+		
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+		<a id="menu:formensino:subMenuprogramasSeletivosEspeciais" name="menu:formensino:subMenuprogramasSeletivosEspeciais" href="#">Programas e Seletivos Especiais da Gradua&#231;&#227;o 
+					<img alt="seta para direita, h&#225; submenu" class="seta"
+				src="/sigaa/img/icone.png">
+		</a>
+		<ul>
+			<li class=marcador></li>
+			
+				
+					
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+						<a id="menu:formensino:inscricaoProgramasSeletivos" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:inscricaoProgramasSeletivos':'menu:formensino:inscricaoProgramasSeletivos'},'');}return false">Inscrever-se</a>
+					
+	
+	</li>
+
+				
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formensino:exibirInscricaoProgramasSeletivos" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:exibirInscricaoProgramasSeletivos':'menu:formensino:exibirInscricaoProgramasSeletivos'},'');}return false">Minhas Inscri&#231;&#245;es</a>
+				
+	
+	</li>
+
+		
+		</ul>
+	
+	
+	</li>
+
+	
+
+	
+	
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<li id="divisor" class="divisor"><hr></li>
+		
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+			
+		<a id="menu:formensino:consultarCurso" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:consultarCurso':'menu:formensino:consultarCurso'},'');}return false">Consultar Curso</a>
+	
+	
+	</li>
+
+
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+			
+		<a id="menu:formensino:consultarComponenteCurricular" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:consultarComponenteCurricular':'menu:formensino:consultarComponenteCurricular'},'');}return false">Consultar Componente Curricular</a>
+	
+	
+	</li>
+
+
+	
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+			
+			<a id="menu:formensino:consultarEstruturaCurricular" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:consultarEstruturaCurricular':'menu:formensino:consultarEstruturaCurricular'},'');}return false">Consultar Estrutura Curricular</a>
+		
+	
+	</li>
+
+	
+
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+			
+		<a id="menu:formensino:consultarTurma" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:consultarTurma':'menu:formensino:consultarTurma'},'');}return false">Consultar Turma</a>
+	
+	
+	
+	</li>
+
+
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+			
+		<a id="menu:formensino:consultarTurmasSolicitadas" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:consultarTurmasSolicitadas':'menu:formensino:consultarTurmasSolicitadas'},'');}return false">Consultar Turmas Solicitadas</a>
+	
+	
+	</li>
+
+
+	
+
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+			
+	
+		<a id="menu:formensino:unidadesAcademicas" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:unidadesAcademicas':'menu:formensino:unidadesAcademicas'},'');}return false">Unidades Acad&#234;micas</a>
+		
+	
+	
+	</li>
+
+		
+	
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<li id="divisor" class="divisor"><hr></li>
+		
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+			
+		<a id="menu:formensino:consultarCalendarioAcademico" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formensino'),{'menu:formensino:consultarCalendarioAcademico':'menu:formensino:consultarCalendarioAcademico'},'');}return false">Consultar Calend&#225;rio Acad&#234;mico</a>
+							
+	
+	
+	</li>
+
+
+					</ul>
+			</div>
+		<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form>
+<form id="menu:formpesquisa" name="menu:formpesquisa" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="menu:formpesquisa" value="menu:formpesquisa" />
+
+			<div id="menu-acessivel-nv1-pesquisa" class="menu-horizontal">
+					<a id="menu:formpesquisa:menupesquisa" name="menu:formpesquisa:menupesquisa" href="#">
+						<img alt="Icone Pesquisa" src="/sigaa/img/icones/pesquisa_menu.gif"/>
+						Pesquisa
+				 	</a>
+				 	<ul>
+						<li class="barra-lateral"></li>
+						
+
+
+
+
+
+
+
+
+
+
+	
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+		<a id="menu:formpesquisa:subMenuplanoDeTrabalho" name="menu:formpesquisa:subMenuplanoDeTrabalho" href="#">Plano de Trabalho 
+					<img alt="seta para direita, h&#225; submenu" class="seta"
+				src="/sigaa/img/icone.png">
+		</a>
+		<ul>
+			<li class=marcador></li>
+			
+			
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+				<a id="menu:formpesquisa:menuPreencherAAvaliacaoDocente" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formpesquisa'),{'menu:formpesquisa:menuPreencherAAvaliacaoDocente':'menu:formpesquisa:menuPreencherAAvaliacaoDocente','url':'/sigaa/pesquisa/planoTrabalho/wizard.do?dispatch=listarPorDiscente'},'');}return false" class="subsubMenu linkM">
+								
+								Meus Planos de Trabalho
+				</a>
+			
+	
+	</li>
+
+		
+		</ul>
+	
+	
+	</li>
+
+		
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+		<a id="menu:formpesquisa:subMenureport_iniciacaoCientifica" name="menu:formpesquisa:subMenureport_iniciacaoCientifica" href="#">Relat&#243;rios de Inicia&#231;&#227;o Cient&#237;fica 
+					<img alt="seta para direita, h&#225; submenu" class="seta"
+				src="/sigaa/img/icone.png">
+		</a>
+		<ul>
+			<li class=marcador></li>
+			
+				
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+		<a id="menu:formpesquisa:subMenusubRelatoriosParciais" name="menu:formpesquisa:subMenusubRelatoriosParciais" href="#">Relat&#243;rios Parciais  
+					<img alt="seta para direita, h&#225; submenu" class="seta"
+				src="/sigaa/img/icone.png">
+		</a>
+		<ul>
+			<li class=marcador></li>
+			
+						
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV3">
+	
+	
+	
+	
+	
+		
+							<a id="menu:formpesquisa:report_enviarRelatorioBolsaParcial" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formpesquisa'),{'menu:formpesquisa:report_enviarRelatorioBolsaParcial':'menu:formpesquisa:report_enviarRelatorioBolsaParcial','url':'/pesquisa/relatorioBolsaParcial.do?dispatch=listarPlanos'},'');}return false" class="subsubMenu linkM">
+									
+									Enviar
+							</a>
+						
+	
+	</li>
+
+						
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV3">
+	
+	
+	
+	
+	
+		
+							<a id="menu:formpesquisa:report_consultarRelatorioBolsaParcial" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formpesquisa'),{'menu:formpesquisa:report_consultarRelatorioBolsaParcial':'menu:formpesquisa:report_consultarRelatorioBolsaParcial','url':'/pesquisa/relatorioBolsaParcial.do?dispatch=listarRelatorios'},'');}return false" class="subsubMenu linkM">
+									
+									Consultar
+							</a>
+						
+	
+	</li>
+	
+					
+				
+		</ul>
+	
+	
+	</li>
+
+				
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+		<a id="menu:formpesquisa:subMenusubRelatoriosFinais" name="menu:formpesquisa:subMenusubRelatoriosFinais" href="#">Relat&#243;rios Finais  
+					<img alt="seta para direita, h&#225; submenu" class="seta"
+				src="/sigaa/img/icone.png">
+		</a>
+		<ul>
+			<li class=marcador></li>
+			
+					
+					
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV3">
+	
+	
+	
+	
+	
+		
+						<a id="menu:formpesquisa:report_consultarRelatorioBolsaFinal" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formpesquisa'),{'menu:formpesquisa:report_consultarRelatorioBolsaFinal':'menu:formpesquisa:report_consultarRelatorioBolsaFinal','url':'/pesquisa/relatorioBolsaFinal.do?dispatch=listarRelatorios'},'');}return false" class="subsubMenu linkM">
+										
+										Consultar</a>
+					
+	
+	</li>
+
+				
+		</ul>
+	
+	
+	</li>
+
+
+	
+
+
+
+
+
+		</ul>
+	
+	
+	</li>
+
+
+					</ul>
+			</div>
+		<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form>
+<form id="menu:formextensao" name="menu:formextensao" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="menu:formextensao" value="menu:formextensao" />
+
+			<div id="menu-acessivel-nv1-extensao" class="menu-horizontal">
+					<a id="menu:formextensao:menuextensao" name="menu:formextensao:menuextensao" href="#">
+						<img alt="Icone Extens&#227;o" src="/sigaa/img/icones/extensao_menu.gif"/>
+						Extens&#227;o
+				 	</a>
+				 	<ul>
+						<li class="barra-lateral"></li>
+						
+
+
+
+
+
+	
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+			<a id="menu:formextensao:consultarAcoes" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formextensao'),{'menu:formextensao:consultarAcoes':'menu:formextensao:consultarAcoes'},'');}return false" class="subMenu linkM">Consultar A&#231;&#245;es</a>
+		
+	
+	</li>
+
+		
+	
+		
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<li id="divisor" class="divisor"><hr></li>
+		
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+			<a id="menu:formextensao:meusPlanosDeTrabalho" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formextensao'),{'menu:formextensao:meusPlanosDeTrabalho':'menu:formextensao:meusPlanosDeTrabalho'},'');}return false" class="subMenu linkM">Meus Planos de Trabalho</a>
+		
+	
+	</li>
+
+		
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+			<a id="menu:formextensao:minhasAcoesComoMembroDaEquipe" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formextensao'),{'menu:formextensao:minhasAcoesComoMembroDaEquipe':'menu:formextensao:minhasAcoesComoMembroDaEquipe'},'');}return false" class="subMenu linkM">Minhas A&#231;&#245;es como Membro da Equipe</a>
+		
+	
+	</li>
+
+	
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+			<a id="menu:formextensao:meusRelatorios" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formextensao'),{'menu:formextensao:meusRelatorios':'menu:formextensao:meusRelatorios'},'');}return false" class="subMenu linkM">Meus Relat&#243;rios</a>
+		
+	
+	</li>
+
+		
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+			<a id="menu:formextensao:certificadosDeclaracoes" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formextensao'),{'menu:formextensao:certificadosDeclaracoes':'menu:formextensao:certificadosDeclaracoes'},'');}return false" class="subMenu linkM">Certificados e Declara&#231;&#245;es</a>
+		
+	
+	</li>
+
+		
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+		<!-- Ajeitar Link  -->
+			<a id="menu:formextensao:inscricaooOn-lineEmAcoesDeExtensao" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formextensao'),{'menu:formextensao:inscricaooOn-lineEmAcoesDeExtensao':'menu:formextensao:inscricaooOn-lineEmAcoesDeExtensao','url':'/sigaa/link/public/extensao/inscricoesOnline'},'');}return false" class="subMenu linkM">Inscri&#231;&#227;o On-line em A&#231;&#245;es de Extens&#227;o
+					</a>
+		
+	
+	</li>
+
+		
+		
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+			<a id="menu:formextensao:visualizarResultadosDasInscricoes" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formextensao'),{'menu:formextensao:visualizarResultadosDasInscricoes':'menu:formextensao:visualizarResultadosDasInscricoes'},'');}return false" class="subMenu linkM">Visualizar Resultados das inscri&#231;&#245;es</a>	
+		
+	
+	</li>
+
+
+					</ul>
+			</div>
+		<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form>
+<form id="menu:formmonitoria" name="menu:formmonitoria" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="menu:formmonitoria" value="menu:formmonitoria" />
+
+			<div id="menu-acessivel-nv1-monitoria" class="menu-horizontal">
+					<a id="menu:formmonitoria:menumonitoria" name="menu:formmonitoria:menumonitoria" href="#">
+						<img alt="Icone Monitoria" src="/sigaa/img/icones/monitoria_menu.gif"/>
+						Monitoria
+				 	</a>
+				 	<ul>
+						<li class="barra-lateral"></li>
+						
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+	<a id="menu:formmonitoria:consultarProjetosMonitoria" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formmonitoria'),{'menu:formmonitoria:consultarProjetosMonitoria':'menu:formmonitoria:consultarProjetosMonitoria'},'');}return false" class="subMenu linkM">
+					Consultar Projetos
+	</a>
+
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+	<a id="menu:formmonitoria:projetosMonitoria" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formmonitoria'),{'menu:formmonitoria:projetosMonitoria':'menu:formmonitoria:projetosMonitoria','url':'/monitoria/DiscenteMonitoria/meus_projetos.jsf'},'');}return false" class="subMenu linkM">
+					
+					Meus Projetos de Monitoria
+	</a>
+
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+	<a id="menu:formmonitoria:relatoriosMonitoria" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formmonitoria'),{'menu:formmonitoria:relatoriosMonitoria':'menu:formmonitoria:relatoriosMonitoria'},'');}return false" class="subMenu linkM">
+					Meus Relat&#243;rios
+	</a>
+
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+		<a id="menu:formmonitoria:subMenucertificadosMonitoria" name="menu:formmonitoria:subMenucertificadosMonitoria" href="#">Meus Certificados 
+					<img alt="seta para direita, h&#225; submenu" class="seta"
+				src="/sigaa/img/icone.png">
+		</a>
+		<ul>
+			<li class=marcador></li>
+			
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+		<a id="menu:formmonitoria:certificadosProjetosMonitoria" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formmonitoria'),{'menu:formmonitoria:certificadosProjetosMonitoria':'menu:formmonitoria:certificadosProjetosMonitoria'},'');}return false" class="subsubMenu linkM">
+						Certificados de Projetos
+		</a>
+	
+	
+	</li>
+
+	
+
+		</ul>
+	
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+		<a id="menu:formmonitoria:subMenuatividadesMesFrequenciaMonitoria" name="menu:formmonitoria:subMenuatividadesMesFrequenciaMonitoria" href="#">Atividades do M&#234;s / Freq&#252;&#234;ncia 
+					<img alt="seta para direita, h&#225; submenu" class="seta"
+				src="/sigaa/img/icone.png">
+		</a>
+		<ul>
+			<li class=marcador></li>
+			
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+		<a id="menu:formmonitoria:cadastrarAtividadesMonitoria" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formmonitoria'),{'menu:formmonitoria:cadastrarAtividadesMonitoria':'menu:formmonitoria:cadastrarAtividadesMonitoria','url':'/monitoria/DiscenteMonitoria/meus_projetos.jsf'},'');}return false" class="subsubMenu linkM">
+						
+						Cadastrar
+		</a>
+	
+	
+	</li>
+
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+		<a id="menu:formmonitoria:consultarAtividadesMonitoria" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formmonitoria'),{'menu:formmonitoria:consultarAtividadesMonitoria':'menu:formmonitoria:consultarAtividadesMonitoria'},'');}return false" class="subsubMenu linkM">
+						Consultar
+		</a>
+	
+	
+	</li>
+
+
+		</ul>
+	
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+	<a id="menu:formmonitoria:inscreverSelecaoMonitoria" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formmonitoria'),{'menu:formmonitoria:inscreverSelecaoMonitoria':'menu:formmonitoria:inscreverSelecaoMonitoria'},'');}return false" class="subMenu linkM">
+					Inscrever-se em Sele&#231;&#227;o de Monitoria
+	</a>
+
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+	<a id="menu:formmonitoria:resultadoSelecaoMonitoria" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formmonitoria'),{'menu:formmonitoria:resultadoSelecaoMonitoria':'menu:formmonitoria:resultadoSelecaoMonitoria'},'');}return false" class="subMenu linkM">
+					Visualizar Resultado da Sele&#231;&#227;o
+	</a>
+
+	
+	</li>
+
+
+
+					</ul>
+			</div>
+		<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form>
+<form id="menu:formbiblioteca" name="menu:formbiblioteca" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="menu:formbiblioteca" value="menu:formbiblioteca" />
+
+			<div id="menu-acessivel-nv1-biblioteca" class="menu-horizontal">
+					<a id="menu:formbiblioteca:menubiblioteca" name="menu:formbiblioteca:menubiblioteca" href="#">
+						<img alt="Icone Biblioteca" src="/sigaa/img/icones/biblioteca_menu.gif"/>
+						Biblioteca
+				 	</a>
+				 	<ul>
+						<li class="barra-lateral"></li>
+						
+
+
+
+
+
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+		<img alt="icone /sigaa/img/biblioteca/novo_usuario.gif" class="icone-menu-ufma" src="/sigaa/img/biblioteca/novo_usuario.gif">
+	
+	
+	
+		
+			<a id="menu:formbiblioteca:bib_cadServicosBiblioteca" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbiblioteca'),{'menu:formbiblioteca:bib_cadServicosBiblioteca':'menu:formbiblioteca:bib_cadServicosBiblioteca'},'');}return false">Cadastrar para Utilizar os Servi&#231;os da Biblioteca</a>
+		
+	
+	</li>
+
+			
+	
+		
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<li id="divisor" class="divisor"><hr></li>
+		
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+		<a id="menu:formbiblioteca:bib_PesqMaterialAcervo" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbiblioteca'),{'menu:formbiblioteca:bib_PesqMaterialAcervo':'menu:formbiblioteca:bib_PesqMaterialAcervo'},'');}return false">Pesquisar Material no Acervo</a>
+		
+	
+	</li>
+
+		
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<li id="divisorbib_emprestimos" class="divisor"><hr></li>
+		
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+		<a id="menu:formbiblioteca:subMenubib_emprestimos" name="menu:formbiblioteca:subMenubib_emprestimos" href="#">Empr&#233;stimos 
+					<img alt="seta para direita, h&#225; submenu" class="seta"
+				src="/sigaa/img/icone.png">
+		</a>
+		<ul>
+			<li class=marcador></li>
+			
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbiblioteca:bib_renovarEmprestimos" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbiblioteca'),{'menu:formbiblioteca:bib_renovarEmprestimos':'menu:formbiblioteca:bib_renovarEmprestimos'},'');}return false">Renovar Meus Empr&#233;stimos</a>
+				
+	
+	</li>
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbiblioteca:bib_historicoEmprestimos" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbiblioteca'),{'menu:formbiblioteca:bib_historicoEmprestimos':'menu:formbiblioteca:bib_historicoEmprestimos'},'');}return false">Meu Hist&#243;rico de Empr&#233;stimos</a>
+				
+	
+	</li>
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbiblioteca:bib_Emitir_GRU" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbiblioteca'),{'menu:formbiblioteca:bib_Emitir_GRU':'menu:formbiblioteca:bib_Emitir_GRU'},'');}return false">Imprimir GRU para pagamentos de multas</a>
+				
+	
+	</li>
+
+			
+		
+		
+		</ul>
+	
+	
+	</li>
+
+		
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+		<a id="menu:formbiblioteca:subMenubib_informacoes_usuario" name="menu:formbiblioteca:subMenubib_informacoes_usuario" href="#">Informa&#231;&#245;es ao Usu&#225;rio 
+					<img alt="seta para direita, h&#225; submenu" class="seta"
+				src="/sigaa/img/icone.png">
+		</a>
+		<ul>
+			<li class=marcador></li>
+			
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbiblioteca:bib_visualizarVinculos" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbiblioteca'),{'menu:formbiblioteca:bib_visualizarVinculos':'menu:formbiblioteca:bib_visualizarVinculos'},'');}return false">Visualizar meus V&#237;nculos no Sistema </a>
+				
+	
+	</li>
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbiblioteca:bib_Visualizar_Politicas" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbiblioteca'),{'menu:formbiblioteca:bib_Visualizar_Politicas':'menu:formbiblioteca:bib_Visualizar_Politicas'},'');}return false">Visualizar as Pol&#237;ticas de Empr&#233;stimo </a>
+				
+	
+	</li>
+
+		
+		
+		</ul>
+	
+	
+	</li>
+
+	
+		
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+	
+		
+			
+				<li id="divisorbib_revervas" class="divisor"><hr></li>
+			
+		
+		
+			<li class="botao vertical nV1">
+		
+		
+		
+		
+		
+			<a id="menu:formbiblioteca:subMenubib_revervas" name="menu:formbiblioteca:subMenubib_revervas" href="#"> Reservas de Materiais
+		    		<img alt="seta para direita, h&#225; submenu" class="seta"
+					src="/sigaa/img/icone.png">
+			</a>
+			<ul>
+				<li class=marcador></li>
+				
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbiblioteca:bib_revervas_visualizar" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbiblioteca'),{'menu:formbiblioteca:bib_revervas_visualizar':'menu:formbiblioteca:bib_revervas_visualizar'},'');}return false">Visualizar Minhas Reservas </a>
+				
+	
+	</li>
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbiblioteca:bib_revervas_solicitar" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbiblioteca'),{'menu:formbiblioteca:bib_revervas_solicitar':'menu:formbiblioteca:bib_revervas_solicitar'},'');}return false">Solicitar Nova Reserva </a>
+				
+	
+	</li>
+
+		
+		
+			</ul>
+		
+		
+		</li>
+	
+
+
+
+		
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+		<a id="menu:formbiblioteca:subMenubib_solicitacoes" name="menu:formbiblioteca:subMenubib_solicitacoes" href="#">Servi&#231;os ao Usu&#225;rio 
+					<img alt="seta para direita, h&#225; submenu" class="seta"
+				src="/sigaa/img/icone.png">
+		</a>
+		<ul>
+			<li class=marcador></li>
+			
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbiblioteca:bib_CriarFichaCatalografica" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbiblioteca'),{'menu:formbiblioteca:bib_CriarFichaCatalografica':'menu:formbiblioteca:bib_CriarFichaCatalografica'},'');}return false">Criar Ficha Catalogr&#225;fica</a>
+				
+	
+	</li>
+
+				
+		
+		
+		</ul>
+	
+	
+	</li>
+
+		
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<li id="divisor" class="divisor"><hr></li>
+		
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+			<a id="menu:formbiblioteca:bib_listarEmprestimos_Tablets" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbiblioteca'),{'menu:formbiblioteca:bib_listarEmprestimos_Tablets':'menu:formbiblioteca:bib_listarEmprestimos_Tablets'},'');}return false">Meus Empr&#233;stimos de Tablets</a>
+		
+	
+	</li>
+
+		
+		
+		
+		
+					</ul>
+			</div>
+		<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form>
+<form id="menu:formbolsa" name="menu:formbolsa" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="menu:formbolsa" value="menu:formbolsa" />
+
+			<div id="menu-acessivel-nv1-bolsa" class="menu-horizontal">
+					<a id="menu:formbolsa:menubolsa" name="menu:formbolsa:menubolsa" href="#">
+						<img alt="Icone Bolsas/Voluntariado" src="/sigaa/img/bolsas.png"/>
+						Bolsas/Voluntariado
+				 	</a>
+				 	<ul>
+						<li class="barra-lateral"></li>
+						
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+	<a id="menu:formbolsa:bolsa_cadastroUnico" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_cadastroUnico':'menu:formbolsa:bolsa_cadastroUnico'},'');}return false">Aderir ao Cadastro &#218;nico </a>
+
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+	
+
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+		<a id="menu:formbolsa:bolsa_visualizarcadastroUnico" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_visualizarcadastroUnico':'menu:formbolsa:bolsa_visualizarcadastroUnico'},'');}return false">Visualizar Cadastro &#218;nico </a>
+
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+		<a id="menu:formbolsa:bolsa_comprobatorios" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_comprobatorios':'menu:formbolsa:bolsa_comprobatorios'},'');}return false">Documentos Comprobat&#243;rios </a>
+
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<li id="divisor" class="divisor"><hr></li>
+		
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+		<a id="menu:formbolsa:bolsa_oportunidades" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_oportunidades':'menu:formbolsa:bolsa_oportunidades'},'');}return false">Oportunidades de Bolsa/Voluntariado</a>
+
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+		<a id="menu:formbolsa:bolsa_registrosInteresse" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_registrosInteresse':'menu:formbolsa:bolsa_registrosInteresse'},'');}return false">Acompanhar Meus Registros de Interesse </a>
+
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+		<a id="menu:formbolsa:bolsa_minhasBolsasInstituicao" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_minhasBolsasInstituicao':'menu:formbolsa:bolsa_minhasBolsasInstituicao'},'');}return false">Minhas Bolsas na Institui&#231;&#227;o </a>
+
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+		<a id="menu:formbolsa:subMenusolicitacao" name="menu:formbolsa:subMenusolicitacao" href="#">Solicita&#231;&#227;o de Bolsas 
+					<img alt="seta para direita, h&#225; submenu" class="seta"
+				src="/sigaa/img/icone.png">
+		</a>
+		<ul>
+			<li class=marcador></li>
+			
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbolsa:bolsa_auxilioTransporte" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_auxilioTransporte':'menu:formbolsa:bolsa_auxilioTransporte'},'');}return false">Aux&#237;lio Transporte </a>
+				
+	
+	</li>
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbolsa:bolsa_auxilioAlimentacaoRU" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_auxilioAlimentacaoRU':'menu:formbolsa:bolsa_auxilioAlimentacaoRU'},'');}return false">Aux&#237;lio Alimenta&#231;&#227;o - Restaurante Universit&#225;rio </a>
+				
+	
+	</li>
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbolsa:bolsa_auxilioPrestacaoPecuniaria" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_auxilioPrestacaoPecuniaria':'menu:formbolsa:bolsa_auxilioPrestacaoPecuniaria'},'');}return false">Aux&#237;lio Alimenta&#231;&#227;o - Presta&#231;&#227;o Pecuni&#225;ria </a>
+				
+	
+	</li>
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbolsa:bolsa_auxilioAprimoramentoAcademico" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_auxilioAprimoramentoAcademico':'menu:formbolsa:bolsa_auxilioAprimoramentoAcademico'},'');}return false">Bolsa Aprimoramento Acad&#234;mico </a>
+				
+	
+	</li>
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbolsa:bolsa_auxilioPermanenciaMEC" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_auxilioPermanenciaMEC':'menu:formbolsa:bolsa_auxilioPermanenciaMEC'},'');}return false">Bolsa Perman&#234;ncia MEC </a>
+				
+	
+	</li>
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbolsa:bolsa_auxilioMoradia" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_auxilioMoradia':'menu:formbolsa:bolsa_auxilioMoradia'},'');}return false">Aux&#237;lio Moradia Estudantil - Resid&#234;ncia Universit&#225;ria </a>
+				
+	
+	</li>
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbolsa:bolsa_auxilioMoradiaPecuniaria" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_auxilioMoradiaPecuniaria':'menu:formbolsa:bolsa_auxilioMoradiaPecuniaria'},'');}return false">Aux&#237;lio Moradia Estudantil - Presta&#231;&#227;o Pecuni&#225;ria </a>
+				
+	
+	</li>
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbolsa:bolsa_auxilioOdontologico" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_auxilioOdontologico':'menu:formbolsa:bolsa_auxilioOdontologico'},'');}return false">Aux&#237;lio Acad&#234;mico - Odontologia </a>
+				
+	
+	</li>
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbolsa:bolsa_focoAcademico" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_focoAcademico':'menu:formbolsa:bolsa_focoAcademico'},'');}return false">Bolsa Foco Acad&#234;mico </a>
+				
+	
+	</li>
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbolsa:bolsa_auxilioPROMISAES" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_auxilioPROMISAES':'menu:formbolsa:bolsa_auxilioPROMISAES'},'');}return false">Bolsa PROMISAES </a>
+				
+	
+	</li>
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbolsa:bolsa_auxilioCreche" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_auxilioCreche':'menu:formbolsa:bolsa_auxilioCreche'},'');}return false">Aux&#237;lio Creche </a>
+				
+	
+	</li>
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbolsa:bolsa_participacaoEvento" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_participacaoEvento':'menu:formbolsa:bolsa_participacaoEvento'},'');}return false">Aux&#237;lio Participa&#231;&#227;o em Evento </a>
+				
+	
+	</li>
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbolsa:bolsa_artisticoCultural" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_artisticoCultural':'menu:formbolsa:bolsa_artisticoCultural'},'');}return false">
+									Aux&#237;lio Art&#237;stico Cultural </a>
+				
+	
+	</li>
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbolsa:bolsa_atleta" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_atleta':'menu:formbolsa:bolsa_atleta'},'');}return false">
+									Aux&#237;lio Atleta </a>
+				
+	
+	</li>
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbolsa:bolsa_digital1" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_digital1':'menu:formbolsa:bolsa_digital1'},'');}return false">
+									Aux&#237;lio Inclus&#227;o Digital I - Pacote de Dados para Acesso &#224; Internet  </a>
+				
+	
+	</li>
+
+				
+				
+				
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formbolsa:bolsa_digital2" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_digital2':'menu:formbolsa:bolsa_digital2'},'');}return false">
+									Aux&#237;lio Inclus&#227;o Digital II - Empr&#233;stimo de Tablet - PCD  </a>
+				
+	
+	</li>
+
+				
+				
+				
+				
+			
+			
+	
+			
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+				<a id="menu:formbolsa:bolsa_digital_ledoc" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_digital_ledoc':'menu:formbolsa:bolsa_digital_ledoc'},'');}return false">
+								Aux&#237;lio Inclus&#227;o Digital - Tablet - LEdoC - BACABAL </a>
+			
+	
+	</li>
+	
+	
+			
+		
+
+		</ul>
+	
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+		<a id="menu:formbolsa:bolsa_acompanharSolicitacao" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_acompanharSolicitacao':'menu:formbolsa:bolsa_acompanharSolicitacao'},'');}return false">Acompanhar Solicita&#231;&#227;o de Bolsa Aux&#237;lio </a>
+
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+		<a id="menu:formbolsa:bolsa_termosCompromissos" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:bolsa_termosCompromissos':'menu:formbolsa:bolsa_termosCompromissos'},'');}return false">Termos de Compromisso <span style="color:red;">(0)</span></a>
+
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<li id="divisor" class="divisor"><hr></li>
+		
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+		<a id="menu:formbolsa:ofertas_proaes" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formbolsa'),{'menu:formbolsa:ofertas_proaes':'menu:formbolsa:ofertas_proaes'},'');}return false">Ofertas de Cursos PROAES </a>
+
+	
+	</li>
+
+
+
+					</ul>
+			</div>
+		<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form>
+<form id="menu:formava" name="menu:formava" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="menu:formava" value="menu:formava" />
+
+			<div id="menu-acessivel-nv1-ava" class="menu-horizontal">
+					<a id="menu:formava:menuava" name="menu:formava:menuava" href="#">
+						<img alt="Icone Ambientes Virtuais" src="/sigaa/img/icones/amb_virt.png"/>
+						Ambientes Virtuais
+				 	</a>
+				 	<ul>
+						<li class="barra-lateral"></li>
+						
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+		<a id="menu:formava:subMenucomunidadeVirtual" name="menu:formava:subMenucomunidadeVirtual" href="#">Comunidades Virtuais 
+					<img alt="seta para direita, h&#225; submenu" class="seta"
+				src="/sigaa/img/icone.png">
+		</a>
+		<ul>
+			<li class=marcador></li>
+			
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formava:comunidadeVirtual_BuscarComunidade" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formava'),{'menu:formava:comunidadeVirtual_BuscarComunidade':'menu:formava:comunidadeVirtual_BuscarComunidade'},'');}return false">Buscar Comunidades Virtuais </a>
+				
+	
+	</li>
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formava:comunidadeVirtual_MinhasComunidades" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formava'),{'menu:formava:comunidadeVirtual_MinhasComunidades':'menu:formava:comunidadeVirtual_MinhasComunidades'},'');}return false">Minhas Comunidades </a>
+				
+	
+	</li>
+
+				
+		
+
+		</ul>
+	
+	
+	</li>
+
+					</ul>
+			</div>
+		<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form>
+<form id="menu:formoutros" name="menu:formoutros" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="menu:formoutros" value="menu:formoutros" />
+
+			<div id="menu-acessivel-nv1-outros" class="menu-horizontal">
+					<a id="menu:formoutros:menuoutros" name="menu:formoutros:menuoutros" href="#">
+						<img alt="Icone Outros" src="/sigaa/img/menu/outros.png"/>
+						Outros
+				 	</a>
+				 	<ul>
+						<li class="barra-lateral"></li>
+						
+
+
+
+
+
+
+
+
+
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+			
+		<a id="menu:formoutros:avisarFaltaDocente" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formoutros'),{'menu:formoutros:avisarFaltaDocente':'menu:formoutros:avisarFaltaDocente'},'');}return false">Avisar Aus&#234;ncia do Professor</a>
+	
+	
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+		<a id="menu:formoutros:subMenucoordenacaoCurso" name="menu:formoutros:subMenucoordenacaoCurso" href="#">Coordena&#231;&#227;o de Curso 
+					<img alt="seta para direita, h&#225; submenu" class="seta"
+				src="/sigaa/img/icone.png">
+		</a>
+		<ul>
+			<li class=marcador></li>
+			
+				
+					
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+						<a id="menu:formoutros:atendimentoAluno" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formoutros'),{'menu:formoutros:atendimentoAluno':'menu:formoutros:atendimentoAluno'},'');}return false">Atendimento ao Aluno </a>
+					
+	
+	</li>
+
+				
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formoutros:forumCursos" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formoutros'),{'menu:formoutros:forumCursos':'menu:formoutros:forumCursos'},'');}return false">F&#243;rum de Cursos </a>
+				
+	
+	</li>
+
+				
+				
+					
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+						<a id="menu:formoutros:paginaCurso" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formoutros'),{'menu:formoutros:paginaCurso':'menu:formoutros:paginaCurso'},'');}return false">
+										 
+										 P&#225;gina do Curso 
+					 	</a>
+					
+	
+	</li>
+
+				
+				
+		
+
+		</ul>
+	
+	
+	</li>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+		<a id="menu:formoutros:subMenuproducoesIntelectuais" name="menu:formoutros:subMenuproducoesIntelectuais" href="#">Produ&#231;&#245;es Intelectuais 
+					<img alt="seta para direita, h&#225; submenu" class="seta"
+				src="/sigaa/img/icone.png">
+		</a>
+		<ul>
+			<li class=marcador></li>
+			
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formoutros:acervoDocentes" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formoutros'),{'menu:formoutros:acervoDocentes':'menu:formoutros:acervoDocentes'},'');}return false">Acervo dos Docentes </a>
+				
+	
+	</li>
+
+				
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formoutros:defesasPosGraduacao" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formoutros'),{'menu:formoutros:defesasPosGraduacao':'menu:formoutros:defesasPosGraduacao'},'');}return false">Consultar Defesas de P&#243;s-gradua&#231;&#227;o </a>
+				
+	
+	</li>
+
+						
+
+		</ul>
+	
+	
+	</li>
+
+
+
+	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+			
+		<a id="menu:formoutros:consultarProcessos" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formoutros'),{'menu:formoutros:consultarProcessos':'menu:formoutros:consultarProcessos'},'');}return false">Consultar Processos do Aluno</a>
+	
+	
+	
+	</li>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+		<img alt="icone /../shared/img/icones/credencial.png" class="icone-menu-ufma" src="/../shared/img/icones/credencial.png">
+	
+	
+		<a id="menu:formoutros:subMenucredenciais" name="menu:formoutros:subMenucredenciais" href="#">Cart&#227;o de Identifica&#231;&#227;o 
+					<img alt="seta para direita, h&#225; submenu" class="seta"
+				src="/sigaa/img/icone.png">
+		</a>
+		<ul>
+			<li class=marcador></li>
+			
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formoutros:solicitar" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formoutros'),{'menu:formoutros:solicitar':'menu:formoutros:solicitar','url':'/entrarSistema.do?sistema=sipac&amp;url=credencial/solicitar_credencial/lista_credenciais.jsf?voltar=/sigaa/verPortalDiscente.do'},'');}return false">
+									
+									Solicitar 1&#170; ou 2&#170; via </a>
+				
+	
+	</li>
+
+				
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formoutros:consultarRequisicoes" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formoutros'),{'menu:formoutros:consultarRequisicoes':'menu:formoutros:consultarRequisicoes','url':'/entrarSistema.do?sistema=sipac&amp;url=credencial/acompanhar_requisicoes/visualizar.jsf?voltar=/sigaa/verPortalDiscente.do'},'');}return false">
+									
+									Consultar Requisi&#231;&#245;es/Imprimir credencial </a>
+				
+	
+	</li>
+
+				
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formoutros:bloquear" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formoutros'),{'menu:formoutros:bloquear':'menu:formoutros:bloquear','url':'/entrarSistema.do?sistema=sipac&amp;url=credencial/bloquear/lista_credenciais.jsf?voltar=/sigaa/verPortalDiscente.do'},'');}return false">
+									
+									Bloquear/Desbloquear </a>
+				
+	
+	</li>
+
+						
+
+		</ul>
+	
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+		<img alt="icone /sigaa/img/icones/restaurante_small.gif" class="icone-menu-ufma" src="/sigaa/img/icones/restaurante_small.gif">
+	
+	
+		<a id="menu:formoutros:subMenurestaurante" name="menu:formoutros:subMenurestaurante" href="#">Restaurante 
+					<img alt="seta para direita, h&#225; submenu" class="seta"
+				src="/sigaa/img/icone.png">
+		</a>
+		<ul>
+			<li class=marcador></li>
+			
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<li class="botao vertical nV2">
+	
+	
+	
+	
+	
+		
+					<a id="menu:formoutros:extrato" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formoutros'),{'menu:formoutros:extrato':'menu:formoutros:extrato','url':'/entrarSistema.do?sistema=sipac&amp;url=restaurante/extrato/visualizar.jsf?voltar=/sigaa/verPortalDiscente.do'},'');}return false">
+									
+									Consultar Extrato </a>
+				
+	
+	</li>
+
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+		</ul>
+	
+	
+	</li>
+
+
+
+
+
+					</ul>
+			</div>
+		<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form>
+<form id="menu:formestagios" name="menu:formestagios" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="menu:formestagios" value="menu:formestagios" />
+
+			<div id="menu-acessivel-nv1-estagios" class="menu-horizontal">
+					<a id="menu:formestagios:menuestagios" name="menu:formestagios:menuestagios" href="#">
+						<img alt="Icone Est&#225;gios" src="/sigaa/img/estagio/estagio_menu.png"/>
+						Est&#225;gios
+				 	</a>
+				 	<ul>
+						<li class="barra-lateral"></li>
+						
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+	<a id="menu:formestagios:comunidadeVirtual_BuscarComunidade" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formestagios'),{'menu:formestagios:comunidadeVirtual_BuscarComunidade':'menu:formestagios:comunidadeVirtual_BuscarComunidade'},'');}return false">
+					Inscri&#231;&#227;o em Est&#225;gio Obrigat&#243;rio 
+	</a>
+
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+	<a id="menu:formestagios:acompanharEstagioObrigatorio" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formestagios'),{'menu:formestagios:acompanharEstagioObrigatorio':'menu:formestagios:acompanharEstagioObrigatorio'},'');}return false">
+					Acompanhar Inscri&#231;&#227;o em Est&#225;gio Obrigat&#243;rio
+	</a>
+
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+	<a id="menu:formestagios:inscricaoEstagioNaoObrigatorio" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formestagios'),{'menu:formestagios:inscricaoEstagioNaoObrigatorio':'menu:formestagios:inscricaoEstagioNaoObrigatorio'},'');}return false">
+					Inscri&#231;&#227;o em Vagas de Est&#225;gio N&#227;o Obrigat&#243;rio 
+	</a>
+
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+	<a id="menu:formestagios:acompanharEstagioNaoObrigatorio" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formestagios'),{'menu:formestagios:acompanharEstagioNaoObrigatorio':'menu:formestagios:acompanharEstagioNaoObrigatorio'},'');}return false">
+					Acompanhar Inscri&#231;&#227;o em Vagas de Est&#225;gio N&#227;o Obrigat&#243;rio
+	</a>
+
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+	<a id="menu:formestagios:listarConveniosEstagio" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formestagios'),{'menu:formestagios:listarConveniosEstagio':'menu:formestagios:listarConveniosEstagio'},'');}return false">
+					Listar Conv&#234;nios de Est&#225;gio
+	</a>
+
+	
+	</li>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+	<a id="menu:formestagios:listarConcedentes" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formestagios'),{'menu:formestagios:listarConcedentes':'menu:formestagios:listarConcedentes'},'');}return false">
+					Listar Concedentes 
+	</a>
+
+	
+	</li>
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<li class="botao vertical nV1">
+	
+	
+	
+	
+	
+	
+		
+	<a id="menu:formestagios:legislacao" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('menu:formestagios'),{'menu:formestagios:legislacao':'menu:formestagios:legislacao'},'');}return false">
+					Consultar Legisla&#231;&#227;o
+	</a>
+
+	
+	</li>
+
+
+					</ul>
+			</div>
+		<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form>
+
+				
+				
+				
+				<!-- Div do Menu Processo Seletivo -->
+				
+								
+				
+				<a id="fim-menu" class="Menu" href="#" style="position: absolute; left: -999em;">FimMenu</a>
+			
+			</div>
+		
+		
+		
+		</div>
+
+		<script type="text/javascript" src="/sigaa/javascript/ufma/menu/controle-menu.js"></script>
+		
+
+	</div>
+</div>
+ 
+				
+			
+			
+			
+		
+		
+			<div id="perfil-docente">
+			<div class="pessoal-docente">
+				<div class="foto">
+					
+					
+						<img src="/sigaa/img/no_picture.png" width="128" height="125"/>
+					
+				</div>
+				<ul>
+					<li>
+						<a	href="/sigaa/abrirCaixaPostal.jsf?sistema=2" >
+							Mensagens
+						</a>
+					</li>
+					<li>
+						<a class="perfil" href="perfil.jsf">
+							Atualizar Foto e Perfil
+						</a>
+					</li>
+					<li>
+						
+<form id="j_id_jsp_1454476119_100" name="j_id_jsp_1454476119_100" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_id_jsp_1454476119_100" value="j_id_jsp_1454476119_100" />
+<a id="j_id_jsp_1454476119_100:meusDadosPessoais" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('j_id_jsp_1454476119_100'),{'j_id_jsp_1454476119_100:meusDadosPessoais':'j_id_jsp_1454476119_100:meusDadosPessoais'},'');}return false">Meus Dados Pessoais</a><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form>
+					</li>
+				</ul>
+				<div class="clear"> </div>
+			</div>
+			<p class="info-docente">
+			
+				<span class="nome"> <small><b>SAHRA VALE SILVA</b></small> </span>
+
+				
+			</p>
+			
+<form id="form_links" name="form_links" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="form_links" value="form_links" />
+
+			<div id="agenda-docente" style="text-align: center">
+				<input id="form_links:forumCursos" type="image" src="/sigaa/img/portal-de-cursos.png" name="form_links:forumCursos" alt="Forum do Curso" /> &nbsp;
+				
+				
+				
+				<a id="form_links:buscarComunidadeVirtual" href="#" title="Buscar Comunidades Virtuais" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form_links'),{'form_links:buscarComunidadeVirtual':'form_links:buscarComunidadeVirtual'},'');}return false"><img src="/sigaa/img/cv.gif" alt="Comunidade Virtual" height="50" style="border:1px solid #CCC; margin-left:9px;" width="90" /></a> 
+				<br/>					
+				<a href="http://portais.ufma.br/PortalUnidade/ufmasustentavel/index.jsf"  target="_blank">
+					<img width="90" height="50" alt="UFMA Sustent&#225;vel" src="/sigaa/img/ufma_sustentavel.png"/>
+				</a>
+				<a href="https://play.google.com/store/apps/details?id=br.ufma.mobile.app&hl=en_US"  target="_blank">
+					<img width="90" height="50" src="/sigaa/img/ufma-mobile-SIGAA.png" alt="UFMA Mobile" style="border:1px solid #CCC; margin-left:9px;"/>
+				</a>
+			</div>
+			<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form><div class="rich-stglpanel blocoDireita" id="j_id_jsp_1454476119_106"><script type="text/javascript">SimpleTogglePanelManager.add(new SimpleTogglePanel("j_id_jsp_1454476119_106", 
+            													"true",{onexpand: '',oncollapse: ''}
+            													
+            							 ));</script><form id="j_id_jsp_1454476119_106:_form" name="j_id_jsp_1454476119_106:_form" method="post" style="margin:0; padding:0; display: inline;" action="/sigaa/portais/discente/discente.jsf"><div class="rich-stglpanel-header headerBloco" id="j_id_jsp_1454476119_106_header" onclick="SimpleTogglePanelManager.toggleOnClient(event,'j_id_jsp_1454476119_106');"><div class="rich-stglpanel-marker"><div class="rich-stglpnl-marker" id="j_id_jsp_1454476119_106_switch_on"><img src="/sigaa/ava/img/painel_seta_cima.png" alt="fechar Marker" /></div><div class="rich-stglpnl-marker" id="j_id_jsp_1454476119_106_switch_off" style="display: none"><img src="/sigaa/ava/img/painel_seta_baixo.png" alt="abrir Marker" /></div></div>Enquete/Question&aacute;rio&#160;</div><div style="display: none;"><input autocomplete="off" id="j_id_jsp_1454476119_106_input" name="j_id_jsp_1454476119_106" type="hidden" value="true" /></div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" /></form><div class="rich-stglpanel-body " id="j_id_jsp_1454476119_106_body">
+   		
+			
+		
+		
+			
+		
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<div id="tabela-tabelaEnquete" class="div-table-tipo04" style="grid-template-columns:auto;">
+	
+			
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+	
+
+		
+		
+			<div id="cabecalhoTabelaEnquete" class="cabecalho-tabela-tipo02"
+				style="grid-template-columns: auto auto;
+ ">
+				
+						<div >T&#237;tulo</div>
+						<div style="text-align: right; display: block;">Votar/Responder</div>
+			
+			</div>
+		
+		
+		
+
+
+		
+	
+
+
+			
+			
+			
+			
+
+			
+		
+		</div>
+	
+	
+	
+		
+	
+	
+
+
+
+
+
+		
+		
+		
+			<center>Nenhuma enquete encontrada</center>
+		
+		
+		
+		
+		<a href="/sigaa/enquete/estatistica/enquetes_anteriores.jsf" class="mais">Ver enquetes/question&#225;rios anteriores</a>
+    </div></div>
+			
+			
+		
+			
+			
+			
+				<p style="text-align: center; font-size: x-small">
+				
+				
+				
+				<a href="http://portais.ufma.br/PortalProReitoria/proen/paginas/pagina_estatica.jsf?id=57" target="_blank">
+				Regulamento dos Cursos de Gradua&#231;&#227;o
+				</a>	
+							
+				</p>
+			
+			<br>
+			
+			
+			
+				
+							
+			
+				
+				
+					<p style="text-align: center; font-size: x-small">
+					
+					
+					
+					<a href="http://www.ufma.br/portalUFMA/arquivo/calendario_academico_vigente.pdf" target="_blank">
+					<!-- FIM - UFMA -->
+					Calend&#225;rio Acad&#234;mico de Gradua&#231;&#227;o
+					</a>
+					</p>				
+				
+				<br/>
+			
+			
+			
+			<!-- UFMA - Felipe Maia: link retirado do menu Ensino -->
+		    
+<form id="form_carteira_set" name="form_carteira_set" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="form_carteira_set" value="form_carteira_set" />
+
+		      <div style="text-align: center">
+			    <a id="form_carteira_set:consultarSitucaoSET" href="#" title="Consultar Situa&ccedil;&atilde;o do Cart&atilde;o de Meia Passagem - SET" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form_carteira_set'),{'form_carteira_set:consultarSitucaoSET':'form_carteira_set:consultarSitucaoSET'},'');}return false">
+			    Consultar Situa&#231;&#227;o do Cart&#227;o de Meia Passagem - SET
+			    </a>
+		      </div>
+		    <input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form>
+			
+			<br/>
+			<!-- Fim UFMA -->
+			
+			
+			<div id="agenda-docente">
+			
+			
+			
+				
+				
+				
+				<div class="titulo-calendario"><strong>Calend&#225;rio  2020.2</strong></div>
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div   style="
+ text-align: left;" class="linha-tabela-tipo02 linhaImpar ">
+			
+					<strong>Per&#237;odo Letivo Atual</strong>
+				 
+	</div>
+
+
+
+
+
+
+
+
+
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div   style="grid-template-columns: 43% 12% 45%;
+ text-align: left;" class="linha-tabela-tipo02 linhaPar ">
+			
+					<div>08/02/2021</div> 
+						<div>a</div>
+					<div>30/04/2021</div>
+				 
+	</div>
+
+
+
+
+
+
+
+
+
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div   style="
+ text-align: left;" class="linha-tabela-tipo02 linhaImpar ">
+			
+					<strong>Per&#237;odo de Trancamento de Curso</strong>
+				 
+	</div>
+
+
+
+
+
+
+
+
+
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div   style="grid-template-columns: 43% 12% 45%;
+ text-align: left;" class="linha-tabela-tipo02 linhaPar ">
+			
+					<div> 08/02/2021 </div>
+						<div>a</div>
+					<div> 03/03/2021 </div>
+				 
+	</div>
+
+
+
+
+
+
+
+
+
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div   style="
+ text-align: left;" class="linha-tabela-tipo02 linhaImpar ">
+			
+					<strong>Per&#237;odo de Consolida&#231;&#227;o de Turma</strong>
+				 
+	</div>
+
+
+
+
+
+
+
+
+
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div   style="grid-template-columns: 43% 12% 45%;
+ text-align: left;" class="linha-tabela-tipo02 linhaPar ">
+			
+					<div> 06/03/2021 </div>
+						<div>a</div>
+						<div> 03/05/2021 </div>
+				 
+	</div>
+
+
+
+
+
+
+
+
+
+				
+				
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div   style="
+ text-align: left;" class="linha-tabela-tipo02 linhaImpar ">
+			
+					<strong>Per&#237;odo de Matr&#237;cula on-line</strong>
+				 
+	</div>
+
+
+
+
+
+
+
+
+
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div   style="grid-template-columns: 43% 12% 45%;
+ text-align: left;" class="linha-tabela-tipo02 linhaPar ">
+			
+					<div> 12/01/2021 </div>
+						<div>a</div>
+					<div> 19/01/2021  </div>
+				 
+	</div>
+
+
+
+
+
+
+
+
+
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div   style="
+ text-align: left;" class="linha-tabela-tipo02 linhaImpar ">
+			
+					<strong>Per&#237;odo de Matr&#237;cula em Turmas de F&#233;rias</strong>
+				 
+	</div>
+
+
+
+
+
+
+
+
+
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div   style="grid-template-columns: 43% 12% 45%;text-align: left;;
+ " class="linha-tabela-tipo02 linhaPar ">
+			
+					<div>  </div>
+						<div>a</div>
+						<div>  </div>
+				 
+	</div>
+
+
+
+
+
+
+
+
+
+				
+					
+				
+				
+			
+			
+				<div class="titulo-calendario" style="margin-top: 20px;"><strong> Dados Institucionais</strong></div>
+				<div style="display:grid; grid-template-columns:auto auto">
+					<div>Matr&#237;cula:</div> <div>2020046421</div>
+					
+					
+						<div> Curso:</div><div>  DIREITO/DCCSO - S&#195;O LU&#205;S - M 	</div>
+					
+					
+					<div> N&#237;vel: </div>	<div> GRADUA&#199;&#195;O </div>
+					<div> Status: </div><div> ATIVO </div>
+					<div> E-Mail: </div><div>sahra.vale@discente...</div>
+					
+					
+					
+					<div> Entrada: </div><div> 2020.2</div>
+					
+					
+					 
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="duasCol" style="text-align: center; font-style: italic;margin-top:25px;">&#205;ndices Acad&#234;micos</div>
+					
+					
+						<div><acronym title="Coeficiente de Rendimento">CR:</acronym></div>
+						<div align="right"><div>0.0</div></div>
+					
+					
+					
+					
+					
+					
+					<div class="duasCol" style="text-align: center; font-style: italic;margin-top:25px;">Integraliza&#231;&#245;es:</div>
+					
+					<div> CH. Obrigat&#243;ria Pendente </div>	<div align="right"> 4140 </div>
+					<div> CH. Optativa Pendente </div>		<div align="right"> 180 </div>
+					<div> CH. Total Curr&#237;culo </div>		<div align="right"> 4320 </div>
+					
+					
+					<div class="duasCol" style="border-width: 1px; border-color: black; border-style: thin; background: white;">
+							<div style="border: thin; border-color: black; width: 0.0%; background: silver; text-align: center;" >
+								&nbsp;
+							</div>
+					</div>
+					<div class="duasCol" align="center"> 00% Integralizado </div>
+					
+					
+				</div>
+				
+
+
+			</div>
+		</div>
+		<div id="main-docente">
+
+			
+			
+			
+			<script type="text/javascript">
+				var fcontent=new Array()
+				
+				fcontent[0]="<p class=\"noticia destaque\"><a href=\"#\" id=\"noticia_2166770\">Normas Regulamentadoras dos Cursos de Gradua&ccedil;&atilde;o</a></p><p class=\"descricao\"><a href=\"#\" style=\"font-weight: normal; text-decoration: none\" id=\"noticia_2166770\">Prezado/a Estudante,    Encaminhamos para conhecimento de Vossa Senhoria as Normas Regulamentadoras dos Cursos de Gradua&ccedil;&atilde;o  (Resolu&ccedil;&atilde;o No 1.175/2014-CONSEPE), a qual substitui a Resolu&ccedil;&atilde;o No 90/1999-CONSEPE.   Considerando a import&acirc;ncia dessas Normas para sua vida acad&ecirc;mica no &acirc;mbito da Universidad...</a></p>";
+				
+			</script>
+			<noscript>
+				"JavaScript do navegador n&#227;o habilitado."
+			
+			</noscript>
+			<div id="noticias-portal">
+				
+				<script>
+									
+					var portal = "ea5d1f112744a7983f19e75390eb3b46";
+					var sistema = "/sigaa";
+				</script>
+				
+				<script type="text/javascript" src="/shared/javascript/scroller-portal.js"></script>
+				
+				
+				
+			</div>
+
+	
+		
+			
+			
+								
+			
+			
+			<div id="turmas-portal" class="simple-panel">
+				<div id="content"></div>
+				<strong class="titulo-painel"> Turmas do Semestre   </strong>
+				<!-- <h4> Turmas do Semestre   </h4> -->
+				
+				
+					
+					
+
+					
+
+						
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+		<div id="tabela-ultimasAtualizacoes" class="div-tabela-tipo02" style="font-size: x-small;">  
+	
+			
+			
+							
+
+
+
+
+
+
+
+
+
+
+
+	
+
+		
+		
+			<div id="cabecalhoUltimasAtualizacoes" class="cabecalho-tabela-tipo02"
+				style="
+ ">
+				
+								<span>&#218;ltimas Atualiza&#231;&#245;es</span> <span
+									style="text-align: right; grid-column: 5;"><a
+									class="divRotator-prev" href="#"><<</a> <a
+									class="divRotator-pause" href="#">Parar</a> <a
+									class="divRotator-continue" href="#">Continuar</a> <a
+									class="divRotator-next" href="#">>></a></span>
+							
+			</div>
+		
+		
+		
+
+
+		
+	
+
+
+							
+							
+							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div style="
+ " class="linha-tabela-tipo01 linhaPar ">
+		
+								
+<form id="formAtualizacoesTurmasacessivel1" name="formAtualizacoesTurmasacessivel1" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="formAtualizacoesTurmasacessivel1" value="formAtualizacoesTurmasacessivel1" />
+
+									
+										<div class="divRotator" style="grid-template-columns: 1fr;">
+											
+												<div class="item-rotator"
+													style="grid-template-columns: 1fr;">
+
+													<div style="display: inline;">
+														09/04/2021
+														-
+														<a href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('formAtualizacoesTurmasacessivel1'),{'formAtualizacoesTurmasacessivel1:j_id_jsp_1454476119_130':'formAtualizacoesTurmasacessivel1:j_id_jsp_1454476119_130','idTurma':'209500'},'');}return false">METODOLOGIA DO TRABALHO CIENT&Iacute;FICO</a>
+													</div>
+													<div>
+														Nova Not&#237;cia: 2&#170; Avalia&#231;&#227;o (Projeto de pesquisa) - Entrega do PDF at&#233; a 2&#170; feira, 12/04/2021, &#224;s 12h (meio dia)
+													</div>
+
+
+												</div>
+											
+												<div class="item-rotator"
+													style="grid-template-columns: 1fr;">
+
+													<div style="display: inline;">
+														08/04/2021
+														-
+														<a href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('formAtualizacoesTurmasacessivel1'),{'formAtualizacoesTurmasacessivel1:j_id_jsp_1454476119_130j_id_1':'formAtualizacoesTurmasacessivel1:j_id_jsp_1454476119_130j_id_1','idTurma':'210958'},'');}return false">ECONOMIA POL&Iacute;TICA</a>
+													</div>
+													<div>
+														Nova Not&#237;cia: Aula 09.04
+													</div>
+
+
+												</div>
+											
+												<div class="item-rotator"
+													style="grid-template-columns: 1fr;">
+
+													<div style="display: inline;">
+														08/04/2021
+														-
+														<a href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('formAtualizacoesTurmasacessivel1'),{'formAtualizacoesTurmasacessivel1:j_id_jsp_1454476119_130j_id_2':'formAtualizacoesTurmasacessivel1:j_id_jsp_1454476119_130j_id_2','idTurma':'210657'},'');}return false">DIREITO ROMANO</a>
+													</div>
+													<div>
+														Nova Not&#237;cia: Segunda Avalia&#231;&#227;o
+													</div>
+
+
+												</div>
+											
+												<div class="item-rotator"
+													style="grid-template-columns: 1fr;">
+
+													<div style="display: inline;">
+														08/04/2021
+														-
+														<a href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('formAtualizacoesTurmasacessivel1'),{'formAtualizacoesTurmasacessivel1:j_id_jsp_1454476119_130j_id_3':'formAtualizacoesTurmasacessivel1:j_id_jsp_1454476119_130j_id_3','idTurma':'210657'},'');}return false">DIREITO ROMANO</a>
+													</div>
+													<div>
+														Nova Not&#237;cia: Segunda Avalia&#231;&#227;o
+													</div>
+
+
+												</div>
+											
+												<div class="item-rotator"
+													style="grid-template-columns: 1fr;">
+
+													<div style="display: inline;">
+														08/04/2021
+														-
+														<a href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('formAtualizacoesTurmasacessivel1'),{'formAtualizacoesTurmasacessivel1:j_id_jsp_1454476119_130j_id_4':'formAtualizacoesTurmasacessivel1:j_id_jsp_1454476119_130j_id_4','idTurma':'210657'},'');}return false">DIREITO ROMANO</a>
+													</div>
+													<div>
+														Nova Not&#237;cia: Datas de Avalia&#231;&#245;es-Segunda e Terceira
+													</div>
+
+
+												</div>
+											
+												<div class="item-rotator"
+													style="grid-template-columns: 1fr;">
+
+													<div style="display: inline;">
+														29/03/2021
+														-
+														<a href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('formAtualizacoesTurmasacessivel1'),{'formAtualizacoesTurmasacessivel1:j_id_jsp_1454476119_130j_id_5':'formAtualizacoesTurmasacessivel1:j_id_jsp_1454476119_130j_id_5','idTurma':'209500'},'');}return false">METODOLOGIA DO TRABALHO CIENT&Iacute;FICO</a>
+													</div>
+													<div>
+														Nova Not&#237;cia: ATEN&#199;&#195;O! Novo Link de aula   meet.google.com/tmj-eres-boe
+													</div>
+
+
+												</div>
+											
+												<div class="item-rotator"
+													style="grid-template-columns: 1fr;">
+
+													<div style="display: inline;">
+														25/03/2021
+														-
+														<a href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('formAtualizacoesTurmasacessivel1'),{'formAtualizacoesTurmasacessivel1:j_id_jsp_1454476119_130j_id_6':'formAtualizacoesTurmasacessivel1:j_id_jsp_1454476119_130j_id_6','idTurma':'210958'},'');}return false">ECONOMIA POL&Iacute;TICA</a>
+													</div>
+													<div>
+														Nova Not&#237;cia: Aula 25.03
+													</div>
+
+
+												</div>
+											
+												<div class="item-rotator"
+													style="grid-template-columns: 1fr;">
+
+													<div style="display: inline;">
+														25/03/2021
+														-
+														<a href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('formAtualizacoesTurmasacessivel1'),{'formAtualizacoesTurmasacessivel1:j_id_jsp_1454476119_130j_id_7':'formAtualizacoesTurmasacessivel1:j_id_jsp_1454476119_130j_id_7','idTurma':'210958'},'');}return false">ECONOMIA POL&Iacute;TICA</a>
+													</div>
+													<div>
+														Nova Not&#237;cia: Desconsiderem o link - foi erro
+													</div>
+
+
+												</div>
+											
+												<div class="item-rotator"
+													style="grid-template-columns: 1fr;">
+
+													<div style="display: inline;">
+														25/03/2021
+														-
+														<a href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('formAtualizacoesTurmasacessivel1'),{'formAtualizacoesTurmasacessivel1:j_id_jsp_1454476119_130j_id_8':'formAtualizacoesTurmasacessivel1:j_id_jsp_1454476119_130j_id_8','idTurma':'210958'},'');}return false">ECONOMIA POL&Iacute;TICA</a>
+													</div>
+													<div>
+														Nova Not&#237;cia: Aula 25.03
+													</div>
+
+
+												</div>
+											
+												<div class="item-rotator"
+													style="grid-template-columns: 1fr;">
+
+													<div style="display: inline;">
+														20/03/2021
+														-
+														<a href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('formAtualizacoesTurmasacessivel1'),{'formAtualizacoesTurmasacessivel1:j_id_jsp_1454476119_130j_id_9':'formAtualizacoesTurmasacessivel1:j_id_jsp_1454476119_130j_id_9','idTurma':'210657'},'');}return false">DIREITO ROMANO</a>
+													</div>
+													<div>
+														Nova Not&#237;cia: Orienta&#231;&#245;es Elabora&#231;&#227;o de QUESTAO
+													</div>
+
+
+												</div>
+											
+										</div>
+									
+								
+									
+									
+								<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form>	
+								
+							 
+	</div>
+
+
+
+
+
+
+
+
+
+
+						
+		</div>
+	
+	
+	
+	
+	
+	
+	
+		
+	
+	
+
+
+
+
+
+						
+					<table class="div-table-tipo03" style="margin-top: 1%; display: table;">
+						<thead>
+						<tr>
+							<th id="componente" width="50%">Componente Curricular</th>
+							<th id="local" style="text-align:left">Local</th>
+							<th id="horario" width="15%">Hor&#225;rio</th>
+							<th></th>
+							<th id="chat" colspan="2" style="width:40px;">Chat</th>
+						</tr>
+						</thead>
+						<tbody>
+						
+						
+<form id="form_acessarTurmaVirtual0" name="form_acessarTurmaVirtual0" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="form_acessarTurmaVirtual0" value="form_acessarTurmaVirtual0" />
+
+							<tr class="odd">
+								<td id="nomeDaturma" class="descricao">
+									
+										<input type="hidden" value="213163" name="idTurma" />
+										<a id="form_acessarTurmaVirtual0:turmaVirtual" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form_acessarTurmaVirtual0'),{'form_acessarTurmaVirtual0:turmaVirtual':'form_acessarTurmaVirtual0:turmaVirtual'},'');}return false">ANTROPOLOGIA GERAL E JUR&Iacute;DICA</a>
+									
+								</td>
+								<td headers="local nomeDaturma" class="info" style="text-align:left">CCSO</td>
+								<td headers="horario nomeDaturma" class="info"><center>4M34
+									
+									</center>
+								</td>
+								<td >
+									
+								</td>
+								<td headers="chat nomeDaturma" nowrap="nowrap" style="width:50px;">
+									
+											<img src="/sigaa/img/flag_grey.png" alt="Nenhum usu&aacute;rio no chat. Docente Offline" />
+											
+											
+										&nbsp;
+										<a id="form_acessarTurmaVirtual0:acessarChatTurma2" href="#" onclick="var a=function(){window.open('/sigaa/entrarChat.do?idchat=213163&amp;idusuario=50295&amp;chatName=ANTROPOLOGIA GERAL E JUR&Iacute;DICA&amp;origem=portalDiscente', 'chat_213163', 'height=485,width=685,location=0,resizable=1');};var b=function(){if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form_acessarTurmaVirtual0'),{'form_acessarTurmaVirtual0:acessarChatTurma2':'form_acessarTurmaVirtual0:acessarChatTurma2','id':'213163'},'');}return false};return (a()==false) ? false : b();"><img src="/sigaa/img/comments.png" alt="Acessar Chat da turma" style="right: 5px;position: relative; padding:0px;" title="Acessar Chat da turma - 0 usu&aacute;rio(s)" /></a>&nbsp;
+										
+
+								</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td colspan="5" id="linha_213163" style="display: none;"></td>
+							</tr>
+						<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form>
+<form id="form_acessarTurmaVirtual1" name="form_acessarTurmaVirtual1" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="form_acessarTurmaVirtual1" value="form_acessarTurmaVirtual1" />
+
+							<tr class="">
+								<td id="nomeDaturma" class="descricao">
+									
+										<input type="hidden" value="210657" name="idTurma" />
+										<a id="form_acessarTurmaVirtual1:turmaVirtual" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form_acessarTurmaVirtual1'),{'form_acessarTurmaVirtual1:turmaVirtual':'form_acessarTurmaVirtual1:turmaVirtual'},'');}return false">DIREITO ROMANO</a>
+									
+								</td>
+								<td headers="local nomeDaturma" class="info" style="text-align:left"></td>
+								<td headers="horario nomeDaturma" class="info"><center>7M12
+									
+									</center>
+								</td>
+								<td >
+									
+								</td>
+								<td headers="chat nomeDaturma" nowrap="nowrap" style="width:50px;">
+									
+											<img src="/sigaa/img/flag_grey.png" alt="Nenhum usu&aacute;rio no chat. Docente Offline" />
+											
+											
+										&nbsp;
+										<a id="form_acessarTurmaVirtual1:acessarChatTurma2" href="#" onclick="var a=function(){window.open('/sigaa/entrarChat.do?idchat=210657&amp;idusuario=50295&amp;chatName=DIREITO ROMANO&amp;origem=portalDiscente', 'chat_210657', 'height=485,width=685,location=0,resizable=1');};var b=function(){if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form_acessarTurmaVirtual1'),{'form_acessarTurmaVirtual1:acessarChatTurma2':'form_acessarTurmaVirtual1:acessarChatTurma2','id':'210657'},'');}return false};return (a()==false) ? false : b();"><img src="/sigaa/img/comments.png" alt="Acessar Chat da turma" style="right: 5px;position: relative; padding:0px;" title="Acessar Chat da turma - 0 usu&aacute;rio(s)" /></a>&nbsp;
+										
+
+								</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td colspan="5" id="linha_210657" style="display: none;"></td>
+							</tr>
+						<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form>
+<form id="form_acessarTurmaVirtual2" name="form_acessarTurmaVirtual2" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="form_acessarTurmaVirtual2" value="form_acessarTurmaVirtual2" />
+
+							<tr class="odd">
+								<td id="nomeDaturma" class="descricao">
+									
+										<input type="hidden" value="210958" name="idTurma" />
+										<a id="form_acessarTurmaVirtual2:turmaVirtual" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form_acessarTurmaVirtual2'),{'form_acessarTurmaVirtual2:turmaVirtual':'form_acessarTurmaVirtual2:turmaVirtual'},'');}return false">ECONOMIA POL&Iacute;TICA</a>
+									
+								</td>
+								<td headers="local nomeDaturma" class="info" style="text-align:left">Ensino Remoto</td>
+								<td headers="horario nomeDaturma" class="info"><center>6M1234
+									
+									</center>
+								</td>
+								<td >
+									
+								</td>
+								<td headers="chat nomeDaturma" nowrap="nowrap" style="width:50px;">
+									
+											<img src="/sigaa/img/flag_grey.png" alt="Nenhum usu&aacute;rio no chat. Docente Offline" />
+											
+											
+										&nbsp;
+										<a id="form_acessarTurmaVirtual2:acessarChatTurma2" href="#" onclick="var a=function(){window.open('/sigaa/entrarChat.do?idchat=210958&amp;idusuario=50295&amp;chatName=ECONOMIA POL&Iacute;TICA&amp;origem=portalDiscente', 'chat_210958', 'height=485,width=685,location=0,resizable=1');};var b=function(){if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form_acessarTurmaVirtual2'),{'form_acessarTurmaVirtual2:acessarChatTurma2':'form_acessarTurmaVirtual2:acessarChatTurma2','id':'210958'},'');}return false};return (a()==false) ? false : b();"><img src="/sigaa/img/comments.png" alt="Acessar Chat da turma" style="right: 5px;position: relative; padding:0px;" title="Acessar Chat da turma - 0 usu&aacute;rio(s)" /></a>&nbsp;
+										
+
+								</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td colspan="5" id="linha_210958" style="display: none;"></td>
+							</tr>
+						<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form>
+<form id="form_acessarTurmaVirtual3" name="form_acessarTurmaVirtual3" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="form_acessarTurmaVirtual3" value="form_acessarTurmaVirtual3" />
+
+							<tr class="">
+								<td id="nomeDaturma" class="descricao">
+									
+										<input type="hidden" value="211254" name="idTurma" />
+										<a id="form_acessarTurmaVirtual3:turmaVirtual" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form_acessarTurmaVirtual3'),{'form_acessarTurmaVirtual3:turmaVirtual':'form_acessarTurmaVirtual3:turmaVirtual'},'');}return false">HIST&Oacute;RIA DO DIREITO</a>
+									
+								</td>
+								<td headers="local nomeDaturma" class="info" style="text-align:left"></td>
+								<td headers="horario nomeDaturma" class="info"><center>5M34
+									
+									</center>
+								</td>
+								<td >
+									
+								</td>
+								<td headers="chat nomeDaturma" nowrap="nowrap" style="width:50px;">
+									
+											<img src="/sigaa/img/flag_grey.png" alt="Nenhum usu&aacute;rio no chat. Docente Offline" />
+											
+											
+										&nbsp;
+										<a id="form_acessarTurmaVirtual3:acessarChatTurma2" href="#" onclick="var a=function(){window.open('/sigaa/entrarChat.do?idchat=211254&amp;idusuario=50295&amp;chatName=HIST&Oacute;RIA DO DIREITO&amp;origem=portalDiscente', 'chat_211254', 'height=485,width=685,location=0,resizable=1');};var b=function(){if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form_acessarTurmaVirtual3'),{'form_acessarTurmaVirtual3:acessarChatTurma2':'form_acessarTurmaVirtual3:acessarChatTurma2','id':'211254'},'');}return false};return (a()==false) ? false : b();"><img src="/sigaa/img/comments.png" alt="Acessar Chat da turma" style="right: 5px;position: relative; padding:0px;" title="Acessar Chat da turma - 0 usu&aacute;rio(s)" /></a>&nbsp;
+										
+
+								</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td colspan="5" id="linha_211254" style="display: none;"></td>
+							</tr>
+						<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form>
+<form id="form_acessarTurmaVirtual4" name="form_acessarTurmaVirtual4" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="form_acessarTurmaVirtual4" value="form_acessarTurmaVirtual4" />
+
+							<tr class="odd">
+								<td id="nomeDaturma" class="descricao">
+									
+										<input type="hidden" value="212291" name="idTurma" />
+										<a id="form_acessarTurmaVirtual4:turmaVirtual" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form_acessarTurmaVirtual4'),{'form_acessarTurmaVirtual4:turmaVirtual':'form_acessarTurmaVirtual4:turmaVirtual'},'');}return false">INTRODU&Ccedil;&Atilde;O &Agrave; FILOSOFIA DO DIREITO</a>
+									
+								</td>
+								<td headers="local nomeDaturma" class="info" style="text-align:left">CCSO</td>
+								<td headers="horario nomeDaturma" class="info"><center>2M34
+									
+									</center>
+								</td>
+								<td >
+									
+								</td>
+								<td headers="chat nomeDaturma" nowrap="nowrap" style="width:50px;">
+									
+											<img src="/sigaa/img/flag_grey.png" alt="Nenhum usu&aacute;rio no chat. Docente Offline" />
+											
+											
+										&nbsp;
+										<a id="form_acessarTurmaVirtual4:acessarChatTurma2" href="#" onclick="var a=function(){window.open('/sigaa/entrarChat.do?idchat=212291&amp;idusuario=50295&amp;chatName=INTRODU&Ccedil;&Atilde;O &Agrave; FILOSOFIA DO DIREITO&amp;origem=portalDiscente', 'chat_212291', 'height=485,width=685,location=0,resizable=1');};var b=function(){if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form_acessarTurmaVirtual4'),{'form_acessarTurmaVirtual4:acessarChatTurma2':'form_acessarTurmaVirtual4:acessarChatTurma2','id':'212291'},'');}return false};return (a()==false) ? false : b();"><img src="/sigaa/img/comments.png" alt="Acessar Chat da turma" style="right: 5px;position: relative; padding:0px;" title="Acessar Chat da turma - 0 usu&aacute;rio(s)" /></a>&nbsp;
+										
+
+								</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td colspan="5" id="linha_212291" style="display: none;"></td>
+							</tr>
+						<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form>
+<form id="form_acessarTurmaVirtual5" name="form_acessarTurmaVirtual5" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="form_acessarTurmaVirtual5" value="form_acessarTurmaVirtual5" />
+
+							<tr class="">
+								<td id="nomeDaturma" class="descricao">
+									
+										<input type="hidden" value="210659" name="idTurma" />
+										<a id="form_acessarTurmaVirtual5:turmaVirtual" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form_acessarTurmaVirtual5'),{'form_acessarTurmaVirtual5:turmaVirtual':'form_acessarTurmaVirtual5:turmaVirtual'},'');}return false">INTRODU&Ccedil;&Atilde;O AO DIREITO</a>
+									
+								</td>
+								<td headers="local nomeDaturma" class="info" style="text-align:left"></td>
+								<td headers="horario nomeDaturma" class="info"><center>24M12
+									
+									</center>
+								</td>
+								<td >
+									
+								</td>
+								<td headers="chat nomeDaturma" nowrap="nowrap" style="width:50px;">
+									
+											<img src="/sigaa/img/flag_grey.png" alt="Nenhum usu&aacute;rio no chat. Docente Offline" />
+											
+											
+										&nbsp;
+										<a id="form_acessarTurmaVirtual5:acessarChatTurma2" href="#" onclick="var a=function(){window.open('/sigaa/entrarChat.do?idchat=210659&amp;idusuario=50295&amp;chatName=INTRODU&Ccedil;&Atilde;O AO DIREITO&amp;origem=portalDiscente', 'chat_210659', 'height=485,width=685,location=0,resizable=1');};var b=function(){if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form_acessarTurmaVirtual5'),{'form_acessarTurmaVirtual5:acessarChatTurma2':'form_acessarTurmaVirtual5:acessarChatTurma2','id':'210659'},'');}return false};return (a()==false) ? false : b();"><img src="/sigaa/img/comments.png" alt="Acessar Chat da turma" style="right: 5px;position: relative; padding:0px;" title="Acessar Chat da turma - 0 usu&aacute;rio(s)" /></a>&nbsp;
+										
+
+								</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td colspan="5" id="linha_210659" style="display: none;"></td>
+							</tr>
+						<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form>
+<form id="form_acessarTurmaVirtual6" name="form_acessarTurmaVirtual6" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="form_acessarTurmaVirtual6" value="form_acessarTurmaVirtual6" />
+
+							<tr class="odd">
+								<td id="nomeDaturma" class="descricao">
+									
+										<input type="hidden" value="209500" name="idTurma" />
+										<a id="form_acessarTurmaVirtual6:turmaVirtual" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form_acessarTurmaVirtual6'),{'form_acessarTurmaVirtual6:turmaVirtual':'form_acessarTurmaVirtual6:turmaVirtual'},'');}return false">METODOLOGIA DO TRABALHO CIENT&Iacute;FICO</a>
+									
+								</td>
+								<td headers="local nomeDaturma" class="info" style="text-align:left">Remotamente</td>
+								<td headers="horario nomeDaturma" class="info"><center>3M1234
+									
+									</center>
+								</td>
+								<td >
+									
+								</td>
+								<td headers="chat nomeDaturma" nowrap="nowrap" style="width:50px;">
+									
+											<img src="/sigaa/img/flag_grey.png" alt="Nenhum usu&aacute;rio no chat. Docente Offline" />
+											
+											
+										&nbsp;
+										<a id="form_acessarTurmaVirtual6:acessarChatTurma2" href="#" onclick="var a=function(){window.open('/sigaa/entrarChat.do?idchat=209500&amp;idusuario=50295&amp;chatName=METODOLOGIA DO TRABALHO CIENT&Iacute;FICO&amp;origem=portalDiscente', 'chat_209500', 'height=485,width=685,location=0,resizable=1');};var b=function(){if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form_acessarTurmaVirtual6'),{'form_acessarTurmaVirtual6:acessarChatTurma2':'form_acessarTurmaVirtual6:acessarChatTurma2','id':'209500'},'');}return false};return (a()==false) ? false : b();"><img src="/sigaa/img/comments.png" alt="Acessar Chat da turma" style="right: 5px;position: relative; padding:0px;" title="Acessar Chat da turma - 0 usu&aacute;rio(s)" /></a>&nbsp;
+										
+
+								</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td colspan="5" id="linha_209500" style="display: none;"></td>
+							</tr>
+						<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						</tbody>
+					</table>
+					
+					<span class="mais" style="text-align: left;">
+					
+					</span>
+					
+
+				
+				<span class="mais">
+					<a href="/sigaa/portais/discente/turmas.jsf">Ver turmas anteriores</a>
+				</span>
+				
+				
+			</div>
+
+			
+			
+			
+			
+			<div id="participantes" class="simple-panel">
+				<strong class="titulo-painel">  Comunidades Virtuais que participa atualmente </strong>
+				
+				
+				
+				
+				
+			</div>
+			
+			
+<form id="formAtividades" name="formAtividades" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="formAtividades" value="formAtividades" />
+
+				<div id="avaliacao-portal" class="simple-panel">
+					
+					
+					
+					
+					
+						
+							<table>
+								<caption style="margin: -4.2em 0 0.5em 1em;"class="titulo-painel"><strong>Minhas atividades</strong></caption>
+								<thead>
+								<tr>
+									<th style="width:30px;"></th>
+									<th id="atividades_data" style="width:165px;">Data</th>
+									<th id="descricao-atividade">Atividade</th>
+								</tr>
+								</thead>
+								<tbody>
+									
+										
+											
+											
+											
+											
+											
+										<tr class="odd">
+											<td style="text-align:center;">  </td>
+											<td headers="atividades_data">
+												
+													<font color="gray">
+														06/04/2021 
+														
+													</font>
+												
+												
+												
+											</td>
+											<td headers="descricao-atividade">
+												<small>
+													
+														<font color="gray">
+													
+													METODOLOGIA DO TRABALHO CIENT&#205;FICO<br> 
+													<strong>Avalia&#231;&#227;o:</strong> 2&#170; Avalia&#231;&#227;o
+													
+													
+														</font>
+													
+												</small>
+											</td>
+										</tr>
+									
+										
+											
+												
+											
+											
+												
+											
+											
+											
+											
+										<tr class="">
+											<td style="text-align:center;"> <img src='/sigaa/img/prova_semana.png' alt='Atividade na Semana'> </td>
+											<td headers="atividades_data">
+												
+												
+													14/04/2021 
+													
+													
+													
+														(2 dias)
+													
+												
+												
+											</td>
+											<td headers="descricao-atividade">
+												<small>
+													
+													ANTROPOLOGIA GERAL E JUR&#205;DICA<br> 
+													<strong>Avalia&#231;&#227;o:</strong> 3&#170; Avalia&#231;&#227;o
+													
+													
+												</small>
+											</td>
+										</tr>
+									
+										
+											
+												
+											
+											
+												
+											
+											
+											
+											
+										<tr class="odd">
+											<td style="text-align:center;"> <img src='/sigaa/img/prova_semana.png' alt='Atividade na Semana'> </td>
+											<td headers="atividades_data">
+												
+												
+													17/04/2021 
+													
+													
+													
+														(5 dias)
+													
+												
+												
+											</td>
+											<td headers="descricao-atividade">
+												<small>
+													
+													DIREITO ROMANO<br> 
+													<strong>Avalia&#231;&#227;o:</strong> 3&#170; Avalia&#231;&#227;o
+													
+													
+												</small>
+											</td>
+										</tr>
+									
+										
+											
+												
+											
+											
+											
+											
+											
+										<tr class="">
+											<td style="text-align:center;"> <img src='/sigaa/img/prova_mes.png' alt='Atividade no m&#234;s atual'> </td>
+											<td headers="atividades_data">
+												
+												
+													20/04/2021 
+													
+													
+													
+														(8 dias)
+													
+												
+												
+											</td>
+											<td headers="descricao-atividade">
+												<small>
+													
+													METODOLOGIA DO TRABALHO CIENT&#205;FICO<br> 
+													<strong>Avalia&#231;&#227;o:</strong> 3&#170; Avalia&#231;&#227;o
+													
+													
+												</small>
+											</td>
+										</tr>
+									
+										
+											
+												
+											
+											
+											
+											
+											
+										<tr class="odd">
+											<td style="text-align:center;"> <img src='/sigaa/img/prova_mes.png' alt='Atividade no m&#234;s atual'> </td>
+											<td headers="atividades_data">
+												
+												
+													24/04/2021 
+													
+													
+													
+														(12 dias)
+													
+												
+												
+											</td>
+											<td headers="descricao-atividade">
+												<small>
+													
+													DIREITO ROMANO<br> 
+													<strong>Avalia&#231;&#227;o:</strong> 3&#170; Avalia&#231;&#227;o
+													
+													
+												</small>
+											</td>
+										</tr>
+									
+										
+											
+												
+											
+											
+											
+											
+											
+										<tr class="">
+											<td style="text-align:center;"> <img src='/sigaa/img/prova_mes.png' alt='Atividade no m&#234;s atual'> </td>
+											<td headers="atividades_data">
+												
+												
+													27/04/2021 
+													
+													
+													
+														(15 dias)
+													
+												
+												
+											</td>
+											<td headers="descricao-atividade">
+												<small>
+													
+													METODOLOGIA DO TRABALHO CIENT&#205;FICO<br> 
+													<strong>Avalia&#231;&#227;o:</strong> 4&#170; Avalia&#231;&#227;o
+													
+													
+												</small>
+											</td>
+										</tr>
+									
+								</tbody>
+							</table>
+							<a class="mais" href="javascript:alert('Solicite que o seu professor inclua as datas da avalia&#231;&#227;o na Turma Virtual. Assim, elas aparecem aqui e voc&#234; se organiza em suas provas')">Minhas avalia&#231;&#245;es n&#227;o aparecem!? Clique aqui!</a>
+						
+		
+						
+					
+					
+				</div>
+			<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form>
+
+	 
+	<div id="forum-portal" class="simple-panel">
+		
+		
+		
+
+			
+				<strong class="titulo-painel"> F&#211;RUM DO CURSO DE DIREITO </strong>
+			
+			
+
+		
+<form id="j_id_jsp_1454476119_172" name="j_id_jsp_1454476119_172" method="post" action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_id_jsp_1454476119_172" value="j_id_jsp_1454476119_172" />
+
+		<div class="descricaoOperacao">
+			Caro Aluno, este f&#243;rum &#233; destinado para discuss&#245;es relacionadas ao seu curso. Todos os alunos 
+			do curso e a coordena&#231;&#227;o tem acesso a ele.
+		</div>
+		
+		
+		<center>
+			<a id="j_id_jsp_1454476119_172:novoTopicoForum" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('j_id_jsp_1454476119_172'),{'j_id_jsp_1454476119_172:novoTopicoForum':'j_id_jsp_1454476119_172:novoTopicoForum'},'');}return false">Cadastrar novo t&oacute;pico para este f&oacute;rum</a>
+			&nbsp;&nbsp;
+			<a id="j_id_jsp_1454476119_172:listarTopicosForum" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('j_id_jsp_1454476119_172'),{'j_id_jsp_1454476119_172:listarTopicosForum':'j_id_jsp_1454476119_172:listarTopicosForum'},'');}return false">Visualizar todos os t&oacute;picos para este f&oacute;rum</a>
+		</center>
+		<br/>
+		
+		
+
+		
+
+			<table class="listagem">
+				<thead>
+					<tr>
+						<th>T&#237;tulo</th>
+						<th>Autor</th>
+						<th style="text-align: center">Respostas</th>
+						<th style="text-align: center">Data</th>
+						<th></th>
+						</th>
+						<th></th>
+					</tr>
+				</thead>
+
+				<tbody>
+
+					
+						<tr class="linhaPar" >
+
+							<td width="50%">
+							<a id="j_id_jsp_1454476119_172:mostrarForumMensagemCurso" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('j_id_jsp_1454476119_172'),{'j_id_jsp_1454476119_172:mostrarForumMensagemCurso':'j_id_jsp_1454476119_172:mostrarForumMensagemCurso','idForumMensagem':'22602830','id':'90263845'},'');}return false">Rela&ccedil;&atilde;o dos Formandos 2020.1</a>
+							</td>
+
+							<!-- <td>Rela&#231;&#227;o dos Formandos 2020.1</td> -->
+							<td><acronym title="RUAN DIDIER BRUZACA ALMEIDA VILELA"> ruan.didier </acronym></td>
+							<td style="text-align: center">3</td>
+							<td style="text-align: center">
+								
+									15/03/2021 15:55:19
+								 
+								
+							</td>
+						</tr>
+					
+						<tr class="linhaImpar" >
+
+							<td width="50%">
+							<a id="j_id_jsp_1454476119_172:mostrarForumMensagemCursoj_id_1" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('j_id_jsp_1454476119_172'),{'j_id_jsp_1454476119_172:mostrarForumMensagemCursoj_id_1':'j_id_jsp_1454476119_172:mostrarForumMensagemCursoj_id_1','idForumMensagem':'22340080','id':'90263845'},'');}return false">Esclarecimentos sobre prazos inscri&ccedil;&otilde;es</a>
+							</td>
+
+							<!-- <td>Esclarecimentos sobre prazos inscri&#231;&#245;es</td> -->
+							<td><acronym title="RUAN DIDIER BRUZACA ALMEIDA VILELA"> ruan.didier </acronym></td>
+							<td style="text-align: center">2</td>
+							<td style="text-align: center">
+								
+									19/02/2021 10:38:45
+								 
+								
+							</td>
+						</tr>
+					
+						<tr class="linhaPar" >
+
+							<td width="50%">
+							<a id="j_id_jsp_1454476119_172:mostrarForumMensagemCursoj_id_2" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('j_id_jsp_1454476119_172'),{'j_id_jsp_1454476119_172:mostrarForumMensagemCursoj_id_2':'j_id_jsp_1454476119_172:mostrarForumMensagemCursoj_id_2','idForumMensagem':'22200901','id':'90263845'},'');}return false">Calend&aacute;rio Est&aacute;gio 2020.2</a>
+							</td>
+
+							<!-- <td>Calend&#225;rio Est&#225;gio 2020.2</td> -->
+							<td><acronym title="MONICA TERESA COSTA SOUSA"> monica.teresa </acronym></td>
+							<td style="text-align: center">2</td>
+							<td style="text-align: center">
+								
+									15/02/2021 14:57:35
+								 
+								
+							</td>
+						</tr>
+					
+						<tr class="linhaImpar" >
+
+							<td width="50%">
+							<a id="j_id_jsp_1454476119_172:mostrarForumMensagemCursoj_id_3" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('j_id_jsp_1454476119_172'),{'j_id_jsp_1454476119_172:mostrarForumMensagemCursoj_id_3':'j_id_jsp_1454476119_172:mostrarForumMensagemCursoj_id_3','idForumMensagem':'22347807','id':'90263845'},'');}return false">Aos inscritos em Monografia I e II 2020.</a>
+							</td>
+
+							<!-- <td>Aos inscritos em Monografia I e II 2020.</td> -->
+							<td><acronym title="RUAN DIDIER BRUZACA ALMEIDA VILELA"> ruan.didier </acronym></td>
+							<td style="text-align: center">0</td>
+							<td style="text-align: center">
+								
+									08/02/2021 12:00:02
+								 
+								
+							</td>
+						</tr>
+					
+						<tr class="linhaPar" >
+
+							<td width="50%">
+							<a id="j_id_jsp_1454476119_172:mostrarForumMensagemCursoj_id_4" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('j_id_jsp_1454476119_172'),{'j_id_jsp_1454476119_172:mostrarForumMensagemCursoj_id_4':'j_id_jsp_1454476119_172:mostrarForumMensagemCursoj_id_4','idForumMensagem':'22321785','id':'90263845'},'');}return false">Convite aos discentes com defici&ecirc;ncia</a>
+							</td>
+
+							<!-- <td>Convite aos discentes com defici&#234;ncia</td> -->
+							<td><acronym title="RUAN DIDIER BRUZACA ALMEIDA VILELA"> ruan.didier </acronym></td>
+							<td style="text-align: center">0</td>
+							<td style="text-align: center">
+								
+									01/02/2021 15:37:08
+								 
+								
+							</td>
+						</tr>
+					
+						<tr class="linhaImpar" >
+
+							<td width="50%">
+							<a id="j_id_jsp_1454476119_172:mostrarForumMensagemCursoj_id_5" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('j_id_jsp_1454476119_172'),{'j_id_jsp_1454476119_172:mostrarForumMensagemCursoj_id_5':'j_id_jsp_1454476119_172:mostrarForumMensagemCursoj_id_5','idForumMensagem':'22320846','id':'90263845'},'');}return false">Informa&ccedil;&atilde;o aos alunos de Monografia 2020</a>
+							</td>
+
+							<!-- <td>Informa&#231;&#227;o aos alunos de Monografia 2020</td> -->
+							<td><acronym title="RUAN DIDIER BRUZACA ALMEIDA VILELA"> ruan.didier </acronym></td>
+							<td style="text-align: center">0</td>
+							<td style="text-align: center">
+								
+									01/02/2021 11:22:30
+								 
+								
+							</td>
+						</tr>
+					
+				</tbody>
+			</table>
+		
+	<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id3" />
+</form>
+	
+	
+	
+	</div>
+			
+		</div>
+		<div class="clear"> </div>
+	</div>
+	
+
+
+<style>
+	#avaliacao-portal th, #avaliacao-portal td{
+		text-align:left;
+	}
+</style>
+
+<script type="text/javascript">
+	PainelNoticias.init('/sigaa/portais/docente/viewNoticia.jsf');
+</script>
+
+
+<div class="clear"></div>
+
+	</div>
+	
+	<br />
+
+	
+		
+			<div style="width: 80%; text-align: center; margin: 0 auto;">
+				<a href='/sigaa/verPortalDiscente.do'>Portal do Discente</a>
+			</div>
+		
+	
+
+	<div id="rodape">	
+		
+		
+		<p>
+			SIGAA | Superintend&#234;ncia de Tecnologia da Informa&#231;&#227;o
+			
+			- UFMA -
+			sigaa2.intranet.ufma.br.sigaa2
+			
+			
+			
+			- <a onclick="javascript:versao();">v3.7.30-124</a>
+			
+		</p>
+	</div>
+
+
+	</div>
+	
+	<div id="footer"></div>
+	<div id="painel-mensagem-envio"></div>
+
+
+
+<!-- MYFACES JAVASCRIPT -->
+
+</body>
+
+</html>
+
+<script type="text/javascript" charset="UTF-8">
+		function versao(){
+			var msg='';
+			msg+='SIGAA 3.7.30-124,  publicado em: 09/04/2021\n\n';
+			msg+='Depend\u00eancias:\n';
+			msg+='Arquitetura 2.6.7_s.3\n';
+			msg+='Entidades Comuns 1.2.49_s.5\n';
+			msg+='Servicos Integrados 1.3.17\n\n';
+			msg+='Copyright SINFO/UFRN';
+			alert(msg);
+		}	
+	</script>
+<noscript>JavaScript do navegador n&#227;o habilitado.</noscript>
+
+
+<script language="javascript">
+Relogio.init(90);
+</script>
+<noscript>JavaScript do navegador n&#227;o habilitado.</noscript>
+
+
+<script type="text/javascript">
+
+		console.log(document.getElementById("rodape"));
+		var rendered = document.getElementById("content");
+		if(rendered==null){
+			var conteudo =document.getElementById("link-conteudo");
+			var pai = conteudo ? conteudo.parentNode.parentNode : null;
+			console.log("Conteudo: "+ conteudo);
+			console.log("PAI: "+ pai);
+			 if (pai) {
+			        pai.removeChild(conteudo.parentNode);
+			 }
+			
+			//conteudo.style.display = "none";
+			
+		}
+		var rendered2 = document.getElementById("navigation");
+		if(rendered2==null){
+			var navegacao =document.getElementById("link-navegacao");
+			var pai = navegacao ? navegacao.parentNode.parentNode : null;
+			console.log("Navega&#231;&#227;o: "+ navegacao);
+			if (pai) {
+		        pai.removeChild(navegacao.parentNode);
+		 	}
+		}
+		var rendered3 = document.getElementById("footer");
+		if(rendered3==null){
+			var rodape =document.getElementById("link-rodape");
+			var pai = rodape ? rodape.parentNode.parentNode : null;
+			console.log("Rodap&#233;: "+ rodape);
+			if (pai) {
+		        pai.removeChild(rodape.parentNode);
+		 	}
+			
+			}
+
+	</script>
+<noscript>JavaScript do navegador n&#227;o habilitado.</noscript>
+

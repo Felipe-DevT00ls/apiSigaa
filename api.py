@@ -15,7 +15,7 @@ class Chrome:
             options=self.options
         )
         self.matricula = [[], [], []]
-        self.horario = [["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"], [[], [], [], [], [], [], []]]
+        self.horario = [["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"], []]
         self.att = []
         self.desc = []
 
@@ -73,20 +73,17 @@ class Chrome:
             table1 = self.chrome.find_element_by_id('horario')
             data1 = table1.get_attribute('innerHTML')
             html1 = BeautifulSoup(data1, 'html.parser')
+            tr = self.chrome.find_elements_by_xpath("//table[@id='horario']/tbody/tr/td")
+            all_schedules = []
+            for i in tr:
+                a = i.get_attribute('innerHTML')
+                b = BeautifulSoup(a, 'html.parser')
+                c = b.span
+                if not c == None:
+                    all_schedules.append(html1.find(id=c['id']).text)
 
-            """PEGANDO OS HORARIOS"""
-            a = 1
-            b = 1
-            while a <= 7:
-                while b <= 6:
-                    value = f'{a}_{b}'
-                    info_hour = html1.findAll(id=value)
-                    self.horario[1][a-1].append(info_hour[0].text)
-                    b += 1
-                b = 1
-                a += 1
+            print(all_schedules)
 
-            print(self.horario)
             self.chrome.get("https://sigaa.ufma.br/sigaa/portais/discente/discente.jsf")
 
         except Exception as error:
